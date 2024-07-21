@@ -1,0 +1,371 @@
+/* 
+primary font 
+font-family: "Cookie", cursive;
+secondary font
+font-family: "Fira Sans", sans-serif;
+color: #FF018A
+*/
+
+
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{font-size: 16px;}
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+h1{font-size: 2.3rem;}
+h2{font-size: 2rem;}
+h3{font-size: 1.7rem;}
+p, a, span{font-size: 1rem;}
+
+
+
+
+
+
+h1, h2, h3, h4, h5{
+    font-family: "Cookie", cursive;
+    color:  #FF018A;
+    text-transform: capitalize;
+}
+h3, h4, h5{
+    color: black;
+    margin-bottom: 10px
+}
+a, p, span{
+    font-family: "Fira Sans", sans-serif;
+}
+a, p, li{
+    line-height: 28px;
+}
+a, p, span, div, button{
+    display: inline-block;
+    border: none;
+    user-select: none;
+    color: #3c3c3c;
+}
+button{
+    outline: none;
+    
+    color: #ffffff;
+}
+ul{margin-left: 30px;}
+
+
+
+
+
+
+
+.main-container{
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+}
+
+
+
+.content-container, .sensual-lush-logo{
+    z-index: 7;
+    position: relative;
+}
+.sensual-lush-logo{
+    padding: 5px 5%;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: end;
+}
+.sensual-lush-logo img{
+    width: auto;
+    margin-right: 20px;
+}
+.sensual-lush-logo h2{
+    text-transform: capitalize;
+}
+.sensual-lush-logo h2 small{
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+
+
+.background-video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.background-video::before{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.454);
+}
+video{
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+#bg-video2{
+    display: none;
+}
+
+
+/* main container */
+.content-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+}
+
+
+
+
+/* the button container  */
+.service-container{top: 56%;}
+.about-container{top: 42%;}
+.service-container, .about-container{
+    height: 60px;
+    width: 80%;
+    position: fixed;
+    transition: all 300ms ease;
+}
+
+
+.open, .open2{
+    z-index: 3;
+    width: 95.5%;
+    height: 98%;
+    top: 1%;
+    overflow-y: hidden;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+
+
+
+/* buttons */
+.service-container > button, .about-container > button{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    
+    transition: all 300ms ease;
+}
+
+.open > button, .open2 > button{
+    left: 2.5%;
+    width: 95%;
+    margin: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+
+
+
+
+
+/* the inner container  */
+.service-container div, .about-container > span{
+    
+    width: 99%;
+    margin-left: 0.4%;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 300ms ease;
+    background-color: #ffffff;
+}
+.privacy-container > span, .service-container-inner > span{
+    margin: auto;
+    height: 0vh;
+    transition: all ease 300ms;
+}
+
+
+
+
+
+.open .privacy-container, .open2 .service-container-inner{
+    margin-top: 0;
+    height: auto;
+}
+
+.open2 .service-container-inner{
+    /* width: 100%; */
+    height: 87vh;
+}
+
+.open .privacy-container > span, .open2 .service-container-inner > span{
+    width: 100%;
+    height: 87vh;
+    overflow-y: scroll;
+    display: block;
+    transition: all ease 300ms;
+    background-color: #ffffff;
+}
+.open .privacy-container > span div{overflow-x: hidden;}
+
+
+
+
+
+.privacy-container > span > span{opacity: 0;}
+
+.open .privacy-container > span > span{
+    margin-top: 25px;
+    margin-left: 5%;
+    width: 90% !important;
+}
+.open .privacy-container > span > span, .open2 .bro{
+    width: 100%;
+    opacity: 1;
+    transition: opacity ease 700ms;
+    transition-delay: 300ms;
+}
+
+
+
+
+.price{
+    opacity: 0;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 10px 92px -12px rgba(0, 0, 0, 0);
+}
+.open-now .price{
+    box-shadow: 0 10px 9px -14px rgba(0, 0, 0, 0.497);
+    transition: all 300ms ease;
+}
+.open2 .price{
+    width: 100%;
+    padding: 5px 5%;
+    box-sizing: border-box;
+    opacity: 1;
+    background-color: white;
+    transition: opacity 700ms ease 300ms;
+}
+
+.service-container .bro p{
+    opacity: 0;
+    transition: opacity 700ms ease 300ms;
+}
+.open2 .bro p{
+    opacity: 1;
+}
+
+.service-container .bro::after{
+    width: 90%;
+    height: 0px;
+    position: absolute;
+    border: none;
+    bottom: 0%;
+    left: 5%;
+    content: "";
+    opacity: 0;
+    background-color: black;
+    transition: opacity 700ms ease 300ms;
+}
+
+
+
+.open2 .bro{
+    margin-bottom: 0px;
+    height: 8%;
+    position: relative;
+}
+.open2 .bro::after{
+    height: 1px;
+    opacity: 1;
+}
+.bro .price span{
+    transform: rotateZ(0deg);
+    font-size: 2.1rem;
+    transition: all 600ms ease;
+}
+.open-now .price span{
+    transform: rotateZ(315deg);
+}
+.bro .price h3{
+    margin: 0;
+}
+.bro .price-container{
+    position: relative;
+    width: 90%;
+    opacity: 0;
+    z-index: 7;
+    margin-left: 5%;
+    height: 0px;
+    transition: all 300ms ease;
+    overflow-y: hidden;
+}
+.bro .price-container p{
+    margin: 0px;
+    transform: translateY(-100%);
+    transition: all 500ms ease;
+}
+.open2 .open-now{height: auto;}
+.open-now .price-container p{
+    margin: 15px 0;
+    transform: translateY(0%);
+}
+.open-now .price-container{
+    height: auto;
+    opacity: 1;
+}
+.bro .price-number{
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
