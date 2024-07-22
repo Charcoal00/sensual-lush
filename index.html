@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sensual Lush</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
+    
+        <meta name="keywords" content="Sensual Lush, Mobile Spa">
+        <meta name="author" content="Code Savant">
+    
+        
+        <!-- link icons -->
+        <link rel="icon" href="./logo.jpg" type="image/x-icon">
+    
+        <!-- Facebook and Twitter integration -->
+        <meta property="og:title" content="Sensual Lush spa">
+        <meta property="og:image" content="<%= require('./logo.png') =%>">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
+        <meta name="twitter:title" content="Sensual Lush spa">
+        <meta name="twitter:image" content="<%= require('./logo.png') =%>" />
+        <meta name="twitter:url" content="">
+
+        
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!-- stylesheet  -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+
+        <div class="main-container">
+
+            <span class="sensual-lush-logo">
+                <img src="./logo.jpg" alt="company-logo"> 
+            </span>
+            
+            <span class="background-video">
+
+                <video autoplay="" muted="" loop="" id="bg-video">
+                    <source src="spa1.mp4" type="video/mp4">
+                </video>
+
+                <video autoplay="" muted="" loop="" id="bg-video2">
+                    <!-- <source src="spa2.mp4" type="video/mp4"> -->
+                </video>
+
+            </span>
+
+
+            <div class="content-container">
+
+                <div class="about-container">
+    
+                    <button onclick="openBar()" id="containerr" class="containe">
+                        <h2>Policies</h2>
+                        <span></span>
+                    </button>
+                    <span class="privacy-container">
+                        <span>
+                            <span>
+                                <span>
+                                    <h3>1. Same Day Bookings:</h3>
+                                </span>
+                                <div>
+                                    <p>It is advisable to book at least 24 hours prior to your appointment time to ensure availability.</p>
+                                    <p>Same day bookings come with an extra charge of ₦10,000.</p>
+                                    <p>Same day bookings takes up 2-3 hours for the therapist(s) to get to your location.</p>
+                                </div>
+                            </span>
+                            <span>
+                                <span>
+                                    <h3>2. Mainland Services:</h3>
+                                </span>
+                                <div>
+                                    <p>Services on the mainland come with an additional cost of ₦20,000.</p>
+                                </div>
+                            </span>
+                            <span>
+                                <span>
+                                    <h3>3. Late Night Bookings:</h3>
+                                </span>
+                                <div>
+                                    <p>Late night bookings (after 8 PM) incur an extra fee of ₦20,000.</p>
+                                </div>
+                            </span>
+                            <span>
+                                <span>
+                                    <h3>4. Deposit Requirement:</h3>
+                                </span>
+                                <div>
+                                    <p>A 20% deposit is required to confirm your booking with us.</p>
+                                </div>
+                            </span>
+                            <span>
+                                <span>
+                                    <h3>5. Late Arrival:</h3>
+                                </span>
+                                <div>
+                                    <p>Lateness to your appointment will incur an additional charge of ₦50,000 after a 30-minute wait.</p>
+                                </div>
+                            </span>
+                            <span>
+                                <span>
+                                    <h3>6. Happy Endings Policy:</h3>
+                                </span>
+                                <div>
+                                    <p>None of our massages come with happy endings by default. This service is only available upon request.</p>
+                                    <p>Our happy endings start from ₦100,000 and the cost varies depending on the therapist you choose.</p>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p class="kkkk"> <em>For more inquiries or to make a booking, please contact us 
+                                        through instagram or call our customer service. 
+                                        Thank you for choosing Sensual Lush Mobile Spa, 
+                                        where luxury meets convenience.
+                                    </em></p>
+                                </div>
+                            </span>
+                        </span>
+    
+                    </span>
+    
+                </div>
+
+
+
+
+                <div class="service-container">
+
+                    <button onclick="openBar2()" id="servicee" class="containe">
+                        <h2>Our Services</h2>
+                        <span></span>
+                    </button>
+                    <div class="service-container-inner">
+
+                        <span>
+                            
+                            <span id="span1" class="bro">
+
+                                <button data-span-id="span1" class="price">
+                                    <h3>1 Hour Deep Tissue Massage</h3> 
+                                    <span>+</span>
+                                </button>
+
+                                <span class="price-container">
+    
+                                    <p>Deep tissue massage is a therapeutic technique that focuses on 
+                                        realigning deeper layers of muscles and connective tissue. It&#39;s 
+                                        especially helpful for chronic aches and pains, as well as contracted 
+                                        areas such as a stiff neck, upper back, lower back pain, leg muscle tightness, 
+                                        and sore shoulders.
+                                    </p>
+    
+                                    <p class="price-number">Price: N40,000</p>
+    
+                                </span>
+
+                            </span>
+                            
+                            <span id="span2" class="bro">
+
+                                <button data-span-id="span2" class="price">
+                                    <h3>Couples Massage</h3> 
+                                    <span>+</span>
+                                </button>
+
+                                <span class="price-container">
+    
+                                    <p>
+                                        A couples massage involves two people receiving massages 
+                                        simultaneously in the same room. This can be with your partner, 
+                                        a friend, or a loved one. It&#39;s a shared experience designed 
+                                        to bring you closer while enjoying the benefits of a relaxing 
+                                        massage.
+                                    </p>
+    
+                                    <p class="price-number">Price: N70,000</p>
+    
+                                </span>
+
+                            </span>
+                            
+                            <span id="span3" class="bro">
+
+                                <button data-span-id="span3" class="price">
+                                    <h3>Sensual Lush Signature (Nuru) Massage</h3> 
+                                    <span>+</span>
+                                </button>
+
+                                <span class="price-container">
+    
+                                    <p>Nuru massage is an intimate and highly sensorial form of 
+                                        bodywork that originated in Japan. The word “Nuru” means “slippery” 
+                                        in Japanese, which perfectly describes the unique, smooth sensation 
+                                        of this massage. It&#39;s known for its use of a special, 
+                                        all-natural Nuru gel made from deep-sea seaweed. 
+                                        This gel is incredibly slippery and moisturizing, providing 
+                                        a unique and deeply relaxing experience.
+                                    </p>
+    
+                                    <p class="price-number">Price: N50,000</p>
+    
+                                </span>
+
+                            </span>
+                            
+                            <span id="span4" class="bro">
+
+                                <button data-span-id="span4" class="price">
+                                    <h3>Double Hands (2Therapists) massage</h3> 
+                                    <span>+</span>
+                                </button>
+
+                                <span class="price-container">
+    
+                                    <p>The Double Hands Massage is a luxurious and deeply 
+                                        relaxing treatment where two skilled therapists work in 
+                                        unison to provide an unparalleled massage experience. This 
+                                        synchronized technique allows for a more comprehensive and 
+                                        harmonious relaxation, targeting different areas of your body 
+                                        simultaneously for maximum relief and rejuvenation.</p>
+    
+                                    <p class="price-number">Price: N100,000</p>
+    
+                                </span>
+
+                            </span>
+
+                        </span>
+
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    
+    </body>
+    <script src="./script.js"></script>
+</html>
