@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sensual Lush</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
+    <head>
 
-    <meta name="keywords" content="Sensual Lush, Mobile Spa">
-    <meta name="author" content="Code Savant">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sensual Lush</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
+    
+        <meta name="keywords" content="Sensual Lush, Mobile Spa">
+        <meta name="author" content="Code Savant">
+    
+        
+        <!-- link icons -->
+        <link rel="icon" href="./logo.jpg" type="image/x-icon">
+    
+        <!-- Facebook and Twitter integration -->
+        <meta property="og:title" content="Sensual Lush spa">
+        <meta property="og:image" content="<%= require('./logo.png') =%>">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
+        <meta name="twitter:title" content="Sensual Lush spa">
+        <meta name="twitter:image" content="<%= require('./logo.png') =%>" />
+        <meta name="twitter:url" content="">
 
-    <!-- fonts -->
+        
+
+        <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+        
+        <!-- stylesheet  -->
+        <link rel="stylesheet" href="style.css">
 
-    <!-- Link icons -->
-    <link rel="icon" href="./logo.jpg" type="image/x-icon">
+    </head>
+    <body>
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="Sensual Lush spa">
-    <meta property="og:image" content="https://charcoal00.github.io/sensual-lush/logo.jpg">
-    <meta property="og:url" content="https://charcoal00.github.io/sensual-lush/">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
-    
-    <meta name="twitter:title" content="Sensual Lush spa">
-    <meta name="twitter:image" content="https://charcoal00.github.io/sensual-lush/logo.jpg">
-    <meta name="twitter:url" content="https://charcoal00.github.io/sensual-lush/">
-    <meta name="twitter:description" content="Hi there, welcome to Sensual Lush spa. We are more than thrilled to connect with you.">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+        <!-- the spinner  -->
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
 
-
-        <div class="main-container">
+        <!-- the body  -->
+        <div class="main-container" id="main1">
 
             <span class="sensual-lush-logo">
                 <img src="./logo.jpg" alt="company-logo"> 
@@ -152,7 +160,7 @@
 
                                 <button data-span-id="span1" class="price">
                                     <h3>1 Hour Deep Tissue Massage</h3> 
-                                    <span>+</span>
+                                    <span><span>+</span></span>
                                 </button>
 
                                 <span class="price-container">
@@ -174,7 +182,7 @@
 
                                 <button data-span-id="span2" class="price">
                                     <h3>Couples Massage</h3> 
-                                    <span>+</span>
+                                    <span><span>+</span></span>
                                 </button>
 
                                 <span class="price-container">
@@ -197,7 +205,7 @@
 
                                 <button data-span-id="span3" class="price">
                                     <h3>Sensual Lush Signature (Nuru) Massage</h3> 
-                                    <span>+</span>
+                                    <span><span>+</span></span>
                                 </button>
 
                                 <span class="price-container">
@@ -220,8 +228,8 @@
                             <span id="span4" class="bro">
 
                                 <button data-span-id="span4" class="price">
-                                    <h3>Double Hands (2Therapists Erotic) massage</h3> 
-                                    <span>+</span>
+                                    <h3>Double Hands (2Therapists) massage</h3> 
+                                    <span><span>+</span></span>
                                 </button>
 
                                 <span class="price-container">
@@ -238,6 +246,28 @@
                                 </span>
 
                             </span>
+                            
+                            <span id="span5" class="bro">
+
+                                <button data-span-id="span5" class="price">
+                                    <h3>Relaxation massage</h3> 
+                                    <span><span>+</span></span>
+                                </button>
+
+                                <span class="price-container">
+    
+                                    <p>Our skilled therapist use gentle, soothing techniques to melt
+                                        away stress and tension, leaving you rejuvenated and refreshed.
+                                        Perfect for unwinding after a long day or simply indulging in 
+                                        some well deserved pampering.
+                                    </p>
+    
+                                    <p class="price-number">Price: N30,000</p>
+    
+                                </span>
+
+                            </span>
+                            
 
                         </span>
 
@@ -248,6 +278,6 @@
 
         </div>
     
-</body>
-<script src="./script.js"></script>
+    </body>
+    <script src="./script.js"></script>
 </html>
