@@ -22,11 +22,37 @@ document.querySelectorAll('.price').forEach(button => {
     button.addEventListener
     ('click', function() {
         
-            // Get the span ID from the data attribute
             const spanId = this.getAttribute('data-span-id');
-            // Add the 'highlight' class to the corresponding span element
             document.getElementById(spanId).classList.toggle('open-now');
 
         }
     );
+    
 });
+
+
+
+
+//======= loader =======
+document.addEventListener("DOMContentLoaded", function() {
+
+    window.addEventListener("load", function() {
+        
+        var loadder = document.getElementById('loader');
+        var spinnerr = document.getElementById('spinner')
+        
+        setTimeout(function() {
+            loadder.style.opacity = "0";
+            loadder.style.visibility = "hidden";
+        }, 1000)
+        
+        setTimeout(function() {
+            document.getElementById('main1').style.display = 'block';
+            document.body.style.overflow = 'visible';
+        }, 1200);
+        
+    });
+    
+});
+
+
