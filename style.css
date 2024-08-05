@@ -37,11 +37,7 @@ p, a, span{font-size: 1rem;}
 
 
 
-/* h1{
-    font-family: "Cookie", cursive;
-    color:  #FF018A;
-    text-transform: capitalize;
-} */
+
 h2, h3, h4, h5{
     color:  #FF018A;
     text-transform: capitalize;
@@ -69,6 +65,54 @@ button{
     color: #ffffff;
 }
 ul{margin-left: 30px;}
+
+
+
+
+
+
+/* ========= loading  spinner ========== */
+
+body{overflow: hidden;}
+
+#loader{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.7s ease, visibility 0.7s ease -200ms;
+}
+
+
+.spinner {
+    opacity: 1;
+    border: 8px solid #f3f3f354;
+    border-top: 8px solid #FF018A;
+    border-radius: 50%;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.9s linear infinite;
+}
+
+
+
+
+.overall-nav{
+    z-index: 24;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
 
 
@@ -355,12 +399,13 @@ video{
     
     bottom: 3%;
 }
-.bro .price span{
+.bro .price span span{
     transform: rotateZ(0deg);
     font-size: 2.1rem;
     transition: all 600ms ease;
+    line-height: 19px;
 }
-.open-now .price span{
+.open-now .price span span{
     transform: rotateZ(315deg);
 }
 .bro .price h3{
@@ -410,6 +455,24 @@ video{
 
 
 
+
+
+
+/* ========= animations ========= */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    /* 0%{transform: scale(1, 1);}
+    100%{transform: scale(1.3, 1.3);} */
+}
+
+
+
+
+
+
+/* ======== media query ======== */
+
 @media screen and (min-width: 700px) {
     .sensual-lush-logo{
         margin: 8vh auto;
@@ -418,3 +481,19 @@ video{
         width: 35%;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .sensual-lush-logo img{width: 25%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
