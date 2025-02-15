@@ -3,7 +3,6 @@
 const toggleBtn = document.getElementById("toggleBtn");
 toggleBtn.addEventListener("click", () => {
     toggleBtn.classList.toggle("ckk");
-    document.querySelector(".sample").classList.toggle("darkmode");
 });
 
 // nav button
