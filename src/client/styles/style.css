@@ -7,7 +7,7 @@
 /* <i class="fi fi-brands-facebook"></i> */
 /* <i class="fi fi-brands-instagram"></i> */
 /* <i class="fi fi-brands-twitter-alt"></i> */
-/* <i class="fi fi-brands-whatsapp"></i> */
+/* < clasis="fi fi-brands-whatsapp"></i> */
 /* CE5B9C service text */
 /* DED5DA border color for service */
 /* 4B3140 text */
@@ -16,7 +16,8 @@
 /* 414141 main text color for services */
 /* footer 383838 */
 /* =======fonts========= */
-
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
 
 @font-face {
     font-family: 'segoeui-bold';
@@ -38,7 +39,6 @@
     src: url("./fonts/segoeuithisz.ttf");
 }
 
-@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
 * {
     padding: 0;
@@ -51,8 +51,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
+    transition: var(--background);
 }
 
 
@@ -68,7 +73,9 @@ body {
     --width-2: 80%;
     --width-3: 70%;
 
-
+    --background: background 200ms ease;
+    --color: color 200ms ease;
+    --border-color: border-color 200ms ease;
     /* sizes  */
     --smallest: 0.5rem;
     --smaller: 0.7rem;
@@ -167,6 +174,108 @@ img {
     text-align: center;
 }
 
+/* =======dark mode ============ */
+.darkmode,
+.darkmode .header-images,
+.darkmode .navbar::before,
+.darkmode .about-page {
+    background-color: #222222;
+}
+
+.darkmode .bringforward .h20 {
+    color: #e80385;
+}
+
+.darkmode .navbar {
+    background-color: rgba(34, 34, 34, 0.873);
+}
+
+.darkmode .link-click,
+.darkmode .nav-btn button {
+    background-color: #311d28;
+    border-color: #38232f;
+}
+
+.darkmode .navbar,
+.darkmode .highlight,
+.darkmode .review-container {
+    border-color: white;
+}
+
+
+.darkmode .review-headder::before {
+    background-color: #dadada;
+}
+
+.darkmode .card-2-link {
+    background-color: #3f3f3f;
+}
+
+.darkmode .nav-mode-button {
+    background-color: #4d4d4d;
+}
+
+.darkmode .star-label,
+.darkmode .gallery-section .star-label {
+    background-color: white;
+}
+
+.darkmode .nav-links a,
+.darkmode .about-us_text,
+.darkmode .service-card-1 p,
+.darkmode .card-2-flex,
+.darkmode .gallery-section .h17,
+.darkmode .subscription-form button,
+.darkmode .service-header h1.h16,
+.darkmode .price-list p,
+.darkmode .price-list-container h2 {
+    color: white;
+}
+
+.darkmode .service-header .p16 {
+    color: #b9b9b9;
+}
+
+.darkmode .services,
+.darkmode .review-container,
+.darkmode .footer {
+    background-color: #313131;
+}
+
+.darkmode .nav-logo p {
+    color: #813760;
+}
+
+.darkmode .label-1 {
+    background-color: #4c042d;
+}
+
+.darkmode .header-images>div {
+    background-image: url("../../../public/img/header-dark.svg");
+}
+
+.darkmode .quote-icon {
+    background-image: url("../../../public/img/quote-dark.svg");
+}
+
+.darkmode .star-label span {
+    background-image: url("../../../public/img/star-dark.svg");
+}
+
+.darkmode .book-now {
+    background-image: url("../../../public/img/booking-dark.svg");
+}
+
+
+.darkmode .review .h16,
+.darkmode .review-container p,
+.darkmode .review-container span {
+    color: #b0b0b0;
+}
+
+.darkmode .gallery-section .star-label .h16 {
+    color: black;
+}
 
 /* ========= top navigation ================ */
 .open-nav {
@@ -178,14 +287,14 @@ img {
     align-items: center;
     margin: 0 0 20px;
     position: relative;
-    height: 70px;
+    height: 100px;
     width: 100%;
 }
 
 
 .navbar {
-    background-color: white;
-    margin: 40px auto 0;
+    background-color: #ffffffec;
+    margin: 0 auto;
     position: sticky;
     top: 0;
     flex-direction: row;
@@ -195,11 +304,12 @@ img {
     border-radius: 30px;
     z-index: var(--zindex-5);
     padding: var(--smallest) var(--small);
+    transition: var(--background), var(--border-color);
 }
 
 .navbar.fixed {
     position: fixed;
-    top: 0;
+    top: 30px;
     left: 5%;
     box-shadow: 0 4px 30px var(--shadow-color);
     animation: slideDown 0.5s ease-in-out;
@@ -227,7 +337,7 @@ img {
     background-color: white;
     width: 0px;
     height: 0px;
-    transition: height 300ms ease 100ms, width 300ms ease 100ms, border-radius 1s ease, top 300ms ease 100ms, right 300ms ease 100ms;
+    transition: height 300ms ease 100ms, width 300ms ease 100ms, border-radius 1s ease, top 300ms ease 100ms, right 300ms ease 100ms, var(--background);
 }
 
 .open-nav .navbar::before {
@@ -239,7 +349,7 @@ img {
 }
 
 .nav-logo {
-    width: 80%;
+    width: 76%;
 }
 
 .nav-logo p {
@@ -248,7 +358,8 @@ img {
     padding: 0;
     margin: 0 0 5px 5px;
     color: var(--buttonOverlay);
-    font-size: var(--small);
+    font-size: calc(var(--smaller) + 2px);
+    transition: var(--color);
 }
 
 .nav-logo a {
@@ -271,24 +382,32 @@ img {
     transition: opacity 300ms ease 300ms, visibility 300ms ease;
 }
 
+.highlight {
+    border: 1px solid var(--text-color);
+    border-radius: 30px;
+    transition: var(--border-color);
+}
+
 .open-nav .nav-links {
     opacity: 1;
     visibility: visible;
 }
 
 .nav-links a {
-    font-size: var(--size-4);
+    padding: 5px 20px;
+    font-size: var(--size-3);
     color: var(--text-color);
+    transition: var(--color);
 }
 
 .nav-mode-button {
-    /* border: 1px solid var(--pink-color); */
     background-color: var(--Service-text-Border-color);
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     width: var(--size-4);
     height: var(--size-4);
+    transition: var(--background);
 }
 
 .nav-mode-button .ckk .moon {
@@ -322,7 +441,7 @@ img {
     color: white;
     background-color: var(--pink-color);
     border: 1px solid var(--pink-border-color);
-    transition: background-color 300ms ease;
+    transition: var(--background), var(--border-color);
 }
 
 #nav-btn {
@@ -389,7 +508,13 @@ img {
     width: 100%;
     height: 100%;
     background-color: var(--dark-pink);
-    opacity: 40%;
+    opacity: 28%;
+    transition: var(--background), opacity 700ms ease;
+}
+
+.darkmode .landing-page-header::before {
+    background-color: #0f0f0fe1;
+    opacity: 100%;
 }
 
 .bringforward {
@@ -403,6 +528,7 @@ img {
     z-index: var(--zindex-3);
     /* margin: 0 auto; */
     font-family: var(--font-1);
+    transition: var(--color);
 }
 
 .landing-page-header p {
@@ -411,6 +537,7 @@ img {
     width: var(--width-1);
     margin: 20px 0;
     line-height: var(--size-4);
+    transition: var(--color);
 }
 
 .background-header-img {
@@ -421,7 +548,8 @@ img {
     background-color: pink;
     width: 100%;
     z-index: var(--zindex-1);
-    background-image: url("../../../public/img/attractive-african-woman-enjoying-face-massage-spa-salon\ \(1\).jpg");
+    background-image: url("../../../public/img/facial-massage-1.jpg");
+    transition: var(--background);
 }
 
 .background-header-img::before {
@@ -455,6 +583,7 @@ img {
     flex-wrap: nowrap;
     padding: calc(var(--smallest)) 0;
     animation: label-motion-1 var(--speed) infinite linear;
+    transition: var(--color), var(--background);
 }
 
 .label-1>span {
@@ -508,10 +637,11 @@ img {
     justify-content: center;
     align-items: center;
     background-color: pink;
-    background-image: url("../../../public/img/african-american-woman-receiving-relaxing-massage-spa.jpg");
+    background-image: url("../../../public/img/blackman-massage.jpg");
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: center;
+    transition: var(--background);
 }
 
 .section-card::before {
@@ -521,6 +651,7 @@ img {
     height: 100%;
     background-color: var(--dark-pink);
     opacity: 40%;
+    transition: var(--background);
 }
 
 .section-card .h16 {
@@ -530,6 +661,7 @@ img {
     font-family: var(--font-1);
     width: var(--width-3);
     color: white;
+    transition: var(--color);
 }
 
 .about-us_text {
@@ -540,6 +672,7 @@ img {
 .about-us_text p {
     font-family: var(--font-2);
     line-height: 30px;
+    transition: var(--color);
 }
 
 .about-us_text h2 {
@@ -555,18 +688,19 @@ img {
     margin-top: var(--small);
     border-radius: 20px;
     color: white;
-    transition: background-color 300ms ease;
+    transition: var(--background), var(--color), var(--border-color);
 }
 
 .link-click:hover,
 .nav-btn button:hover {
-    background-color: #d12f8b;
+    background-color: #b32977;
 }
 
 .services {
     flex-direction: column;
     position: relative;
     background-color: #cfbb83;
+    transition: var(--background);
 }
 
 .service-card-1,
@@ -585,6 +719,7 @@ img {
     padding: 3px var(--size-3);
     border-radius: 20px;
     border: 1px solid var(--Service-text-Border-color);
+    transition: var(--border-color), var(--color), var(--background);
 }
 
 .star-label .h16 {
@@ -606,6 +741,7 @@ img {
 }
 
 .service-card-1 p {
+    transition: var(--color);
     line-height: var(--size-4);
 }
 
@@ -637,13 +773,14 @@ img {
     padding: var(--size-1);
     background-color: white;
     border-radius: 20px;
+    transition: var(--background);
 }
 
 .card-2-img {
     border-radius: 20px;
     width: 100px;
     height: 100px;
-    background-image: url("../../../public/img/sensual-lush.png");
+    background-image: url("../../../public/img/facial-massage-1.jpg");
     background-color: var(--Service-text-Border-color);
 }
 
@@ -651,6 +788,7 @@ img {
     color: var(--text-color);
     margin-top: var(--smaller);
     font-weight: 700;
+    transition: var(--color);
 }
 
 
@@ -662,10 +800,21 @@ img {
     width: var(--width-1);
 }
 
+.gallery-section .star-label {
+    margin-bottom: var(--smallest);
+    background-color: transparent;
+}
+
+.gallery-section .star-label .h16 {
+    color: var(--dark-pink);
+    transition: var(--color);
+}
+
 .gallery-section .h17 {
-    width: 50%;
+    width: 100%;
     font-size: var(--size-2);
     text-transform: capitalize;
+    transition: var(--color);
 }
 
 .gallery-container {
@@ -700,7 +849,7 @@ img {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url("../../../public/img/sensual-lush.png");
+    background-image: url("../../../public/img/blackman-massage.jpg");
 }
 
 .gallery-photos-2 {
@@ -725,20 +874,23 @@ img {
     left: 0;
 }
 
-/* .gallery-photos:hover~.gallery-photos a {
+.cover-photos span {
     color: white;
-} */
-
-.gallery-photos>span>span {
+    display: block;
     font-size: 25px;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    opacity: 0;
+    /* opacity: 0; */
     margin-bottom: var(--smaller);
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    transition: opacity 300ms ease 350ms;
 }
 
-.gallery-photos:hover+.gallery-photos>span>span {
+.gallery-photos:hover .cover-photos a {
+    transform: translateY(0%);
+}
+
+.gallery-photos:hover .cover-photos span {
     opacity: 1;
 }
 
@@ -753,6 +905,12 @@ img {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.cover-photos a {
+    color: white;
+    transform: translateY(300%);
+    transition: transform 300ms ease 300ms;
 }
 
 #last-ul {
@@ -780,10 +938,14 @@ img {
     background-color: var(--Text-border);
     content: "";
     height: 1px;
+    transition: var(--background);
 }
 
 .review .h16 {
     font-family: var(--font-2);
+    font-weight: 300;
+    margin-bottom: var(--smallest);
+    transition: var(--color);
 }
 
 .review-lists {
@@ -797,10 +959,17 @@ img {
     border: 1px solid var(--Text-border);
     padding: var(--small);
     border-radius: 15px;
+    transition: var(--background), var(--border-color);
 }
 
 .review-container>p {
-    margin-bottom: var(--size-1);
+    margin-bottom: var(--size-3);
+    font-size: var(--small);
+}
+
+.review-container>p,
+.review-container span {
+    transition: var(--color);
 }
 
 .review-head {
@@ -820,7 +989,7 @@ img {
     height: 40px;
     border-radius: 100%;
     margin-right: var(--small);
-    background-image: url("../../../public/img/logo-light.svg");
+    background-image: url("../../../public/img/black\ lady.webp");
 }
 
 .review--1>span {
@@ -833,7 +1002,7 @@ img {
 
 .quote-icon {
     display: block;
-    background-image: url("../../../public/img/logo-dark.svg");
+    background-image: url("../../../public/img/quote-light.svg");
     width: 30px;
     height: 30px;
 }
@@ -846,19 +1015,34 @@ img {
     width: var(--width-2);
     padding: var(--size-3) var(--size-2);
     margin: var(--size-8) auto;
-    background-image: url("../../../public/img/header-light.svg");
+    background-image: url("../../../public/img/book-light.svg");
     text-align: center;
 }
 
 .book-now .h17 {
+    color: white;
     margin-bottom: var(--size-1);
 }
 
 .book-now p {
     width: 85%;
     margin: 0 auto;
+    color: white;
 }
 
+.book-now .link-click {
+    border-radius: 40px;
+    font-size: var(--size-1);
+    margin-top: var(--size-2);
+    background-color: white;
+    color: black;
+    border: none;
+    padding: var(--smaller) var(--size-4);
+}
+
+.book-now .link-click:hover {
+    background-color: #f5f5f5;
+}
 
 
 /* ====== footer ======= */
@@ -866,6 +1050,7 @@ img {
     padding: var(--size-5) 0 var(--size-1) 0;
     background-color: var(--footer-background-color);
     width: 100%;
+    transition: var(--background);
 }
 
 .footer h3 {
@@ -885,6 +1070,11 @@ img {
     color: var(--Service-text-Border-color);
 }
 
+.footer .pp {
+    font-size: var(--smaller);
+    opacity: 0.7;
+}
+
 .footer-k {
     margin: 0 auto var(--size-3) auto;
     width: var(--width-1);
@@ -898,7 +1088,7 @@ img {
 }
 
 .footer-links-list {
-    flex: 1 1 130px;
+    flex: 1 1 170px;
     margin: var(--size-3) 0;
 }
 
@@ -939,12 +1129,22 @@ img {
 }
 
 .subscription-form input {
+    outline: none;
     border: 1px solid var(--Service-text-Border-color);
     padding: var(--small);
     width: 100%;
     background-color: #383838;
     border-radius: 16px;
     color: var(--Service-text-Border-color);
+    transition: var(--border-color);
+}
+
+.subscription-form input:hover {
+    border-color: white;
+}
+
+.subscription-form input:focus {
+    border-color: var(--pink-border-color);
 }
 
 .subscription-form input::placeholder {
@@ -993,10 +1193,17 @@ img {
     border-radius: 100%;
     height: 40px;
     width: 40px;
-    background-color: var(--pink-border-color);
-    padding: var(--smaller);
     margin-right: var(--size-2);
     border: 1px solid var(--Service-text-Border-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-links span i {
+    line-height: 0;
+    vertical-align: center;
+    color: #DED5DA;
+    font-size: var(--small);
 }
 
 .footer-credits {
@@ -1013,6 +1220,10 @@ img {
 
 
 @media screen and (min-width: 768px) {
+    .darkmode .bringforward p {
+        color: #dadada;
+    }
+
     #nav-btn {
         display: none;
         height: 0;
@@ -1038,6 +1249,7 @@ img {
     .nav-links a {
         margin: 0 var(--small);
         font-size: var(--small);
+        padding: 5px;
     }
 
     .nav-btn {
@@ -1085,6 +1297,7 @@ img {
         z-index: var(--zindex-2);
         justify-content: center;
         align-items: center;
+        transition: var(--background);
     }
 
     .header-images>div {
@@ -1092,7 +1305,7 @@ img {
         position: relative;
         width: var(--width-2);
         height: 65%;
-        background-color: var(--pink-color);
+        background-color: #ce5b9c9f;
         border-radius: 40px;
     }
 
@@ -1108,8 +1321,8 @@ img {
         overflow: hidden;
         flex: 1 1 300px;
         border-radius: 20px;
-        background-color: var(--pink-color);
-        background-image: url("../../../public/img/course-03.jpg");
+        background-color: #ce5b9cc7;
+        background-image: url("../../../public/img/facial-massage-1.jpg");
     }
 
     .header_1 {
@@ -1170,6 +1383,7 @@ img {
         padding: var(--size-5) 5%;
         align-items: stretch;
         gap: 4%;
+        transition: var(--background);
     }
 
     .service-card-1 .link-click {
@@ -1261,21 +1475,67 @@ img {
 
     #last-ul li {
         width: calc(94%/3);
-        height: 200px;
+        height: 230px;
     }
 
-
+    .review-headder::before {
+        width: 65%;
+    }
 
     /* ====== book-now ======= */
     .book-now {
         padding: var(--size-6) var(--size-7);
     }
+
+
+
+
+
+
+
+    .service-header {
+        flex-direction: row;
+        gap: 2%;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        margin: var(--size-6) auto !important;
+    }
+
+    .service-header>div {
+        width: auto;
+        flex: 1 1 300px;
+        margin: 0;
+        height: auto;
+    }
+
+    .service-header h1.h16 {
+        font-size: var(--size-5) !important;
+    }
+        .price-list-container h2{
+            font-size: var(--size-3) !important;
+        }
+                .price-list p,
+                .price-list span,
+                .price-list h3,
+                .price-list button{
+                    font-size: var(--small) !important;
+                }
 }
 
 
 
 
 @media screen and (min-width: 1000px) {
+
+
+    .nav-links {
+        width: 55%;
+    }
+
+    .nav-links a {
+        padding: var(--smallest);
+    }
+
     .bringforward {
         margin-top: -20%;
     }
@@ -1284,8 +1544,50 @@ img {
         font-size: var(--size-7);
     }
 
+    .animated-label {
+        margin: 80px 0;
+    }
+
+    .about-us {
+        margin-bottom: var(--size-8);
+    }
+
+    .section-card {
+        height: 390px;
+    }
+
+    .card-2 li {
+        max-width: 300px;
+    }
+
+    .star-label {
+        margin-bottom: var(--size-5);
+    }
+
+    .service-header-txt {
+        margin-bottom: var(--size-3);
+
+    }
+
+    .service-card-1 .link-click {
+        margin-top: var(--size-3);
+    }
+
     .landing-page-header {
         height: calc(140vh - 90px);
+    }
+
+    .gallery-section {
+        margin: var(--size-7) auto;
+    }
+
+    /* .gallery-section .h17 {
+
+        width: 40%;
+    } */
+
+    .gallery-container {
+        margin: var(--size-3) 0;
     }
 
     .header-main-images {
@@ -1309,7 +1611,427 @@ img {
         height: 200px;
     }
 
+    .review-headder::before {
+        width: 70%;
+    }
+
     .subscription-form button {
         width: 6%;
     }
+
+    .book-now {
+        width: var(--width-3);
+    }
+
+    .service-header h1.h16 {
+        font-size: var(--size-6) !important;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --size-1: 1.3rem;
+    }
+
+    .book-now {
+        margin: var(--size-9) auto;
+    }
+
+    .book-now .h17 {
+        font-size: var(--size-5);
+
+    }
+
+    .book-now p {
+        width: 70%;
+        display: block;
+    }
+
+    .nav-links {
+        width: 64%;
+    }
+
+    .nav-links a {
+        margin: 0 var(--size-4);
+    }
+
+    .bringforward {
+        width: 64%;
+        margin-top: -12%;
+    }
+
+    .bringforward .h20 {
+        font-size: calc(var(--size-8) - 15px);
+    }
+
+    .services {
+        padding: var(--size-7) 5%;
+        gap: 8%;
+    }
+
+    .service-card-1,
+    .service-card-2 {
+        width: 42%;
+    }
+
+    /* .gallery-section .h17 {
+        width: 30%;
+    } */
+
+    .star-label {
+        margin-bottom: var(--size-7);
+    }
+
+    .service-header-txt {
+        margin-bottom: var(--size-4);
+
+    }
+
+    .service-card-1 .link-click {
+        margin-top: var(--size-4);
+    }
+
+    .review-lists {
+        justify-content: flex-start;
+        gap: 2%;
+    }
+
+    .review-headder::before {
+        width: 75%;
+    }
+
+    .review-container {
+        flex: unset;
+        width: calc(96% / 3);
+    }
+
+    .book-now {
+        width: 60%;
+        padding: var(--size-7);
+    }
+
+    .service-header h1.h16 {
+        font-size: var(--size-7);
+    }
+        .service-header h1.h16 {
+            font-size: calc(var(--size-7) - 10px) !important;
+        }
+                .price-list>div {
+                    flex: 1 1 350px !important;
+                }
+}
+
+
+/* @media screen and (max-width: 776px) {
+    .navbar {
+        margin: 20px auto;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* our services  */
+.service-header {
+    width: var(--width-1);
+    margin: var(--size-5) auto;
+    flex-wrap: wrap;
+}
+
+.service-header p.h16 {
+    font-weight: 700;
+    color: var(--text-color);
+
+}
+
+.service-header .star-label {
+    padding: 3px 10px;
+    width: 170px;
+}
+
+.service-header .p16 {
+    line-height: var(--size-4);
+    margin-bottom: var(--size-4);
+    transition: var(--color);
+}
+
+.service-header h1.h16 {
+    font-size: var(--size-4);
+    font-family: var(--font-2);
+    text-transform: capitalize;
+    color: var(--text-color);
+    margin-bottom: var(--size-1);
+    transition: var(--color);
+}
+
+.service-header h1.h16 span {
+    font-size: inherit;
+    text-transform: inherit;
+    color: var(--pink-color);
+}
+
+.service-header-images {
+    width: 100%;
+    gap: 2%;
+    flex-direction: column;
+    position: relative;
+    align-items: end;
+    height: 350px;
+    overflow: hidden;
+    border-bottom-right-radius: 35%;
+}
+
+.service-header-images span {
+    border-radius: 35px;
+    width: 49%;
+    background-color: var(--pink-color);
+    height: 50%;
+    background-image: url("../../../public/img/blackman-massage.jpg");
+}
+
+.service-header-images .first-image {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.service-header-images .last-image {
+    border-bottom-right-radius: 50%;
+}
+
+
+.price-list {
+    margin: 0 auto;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.price-list>div {
+    flex: 1 1 250px;
+}
+
+.price-list-container {
+    border: 1px solid orange;
+    padding: var(--smaller);
+    border-radius: 16px;
+    margin-bottom: var(--size-3);
+    /* width: 100%; */
+    transition: var(--background), b;
+}
+
+.darkmode .price-list-container {
+    background-color: #333333;
+    border-color: #474747;
+}
+
+.price-list-container h2 {
+    font-family: var(--font-1);
+    font-weight: 100;
+    font-size: var(--size-1);
+    margin-bottom: var(--smallest);
+    transition: var(--color);
+}
+
+.price-list div>p {
+    opacity: 0.7;
+    font-size: 0.7rem;
+}
+
+.price-list p,
+.price-list span,
+.price-list h3,
+.price-list button {
+    font-size: 0.8rem;
+    font-family: var(--font-2);
+}
+
+.price-list p {
+    transition: var(--color);
+}
+
+.price-list-image {
+    background-image: url("../../../public/img/facial-massage-1.jpg");
+    height: 150px;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--pink-color);
+    margin-bottom: var(--size-1);
+}
+
+.price-benifit {
+    display: inline-block;
+    width: auto;
+    background-color: #fccd34;
+    padding: 3px var(--smaller);
+    border-radius: 8px;
+    margin: var(--smaller) 0;
+    color: #9c7906;
+    border: 1px solid #9c7906;
+}
+
+.benifit-list {
+    justify-content: start;
+    margin-bottom: 3px;
+}
+
+.benifit-list span {
+    width: 10px;
+    height: 10px;
+    background-image: url("../../../public/img/star-yellow.svg");
+    margin: 0 7px;
+}
+
+.price-number-container {
+    margin: var(--smallest) 0;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.price-number-container span span {
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    background-image: url("../../../public/img/cash-icon.svg");
+}
+
+.price-number {
+    border-radius: 5px;
+    background-color: #37a014;
+    padding: 2px 6px;
+    color: white;
+    border: 1px solid green;
+}
+
+.price-list-container .link-click {
+    border-radius: 11px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* ===== about page  */
+.about-page {
+    background-color: rgb(255, 215, 236);
+    padding: 1px 0;
+    transition: var(--background);
+}
+
+.about-page-header {
+    width: 90%;
+    margin: var(--size-5) auto;
+}
+
+.about-page-header .star-label, .about-page-section-1 .star-label {
+    width: fit-content;
+    margin: 0px auto;
+    justify-content: center;
+    margin-bottom: var(--size-4);
+    background-color: transparent;
+    border-color: orange;
+    color: orange;
+}
+
+.about-page-header .hi6, .about-page-section-1 .h16 {
+    margin: 5px;
+}
+
+.about-page-header .h20 {
+    margin-bottom: var(--size-6);
+    font-family: var(--font-2);
+    font-size: var(--size-6);
+    text-align: center;
+}
+
+.about-page-header .star-label2 {
+    background-color: var(--pink-color);
+    color: white;
+    border: none;
+    padding: var(--smaller) var(--size-2);
+}
+
+
+
+.about-page-section-1 {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 5%;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.about-page-section-1 h2 {
+    margin-bottom: var(--size-1);
+    font-family: var(--font-2);
+    font-size: var(--size-6);
+}
+.about-page-section-1 p{
+    line-height: var(--size-5);
+}
+.about-page-section-1>div {
+    flex: 1 1 400px;
+}
+
+.blur-background-container {
+    height: 500px;
+    margin-bottom: var(--size-1);
+}
+
+.blur-background-container span {
+    background-image: url("../../../public/img/blackman-massage.jpg");
+    border-radius: 30px;
+}
+
+.blur-a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.blur-b {
+    display: none;
+}
+.about-page-section-1 .star-label{
+    margin: var(--size-4) 0;
+}
+.about-page-section-1 .star-label p{
+    line-height: initial;
 }
