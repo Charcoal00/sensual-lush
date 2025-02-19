@@ -84,6 +84,7 @@
     width: 100%;
     background-color: white;
     padding: var(--size-3);
+    transition: var(--background);
 
 }
 
@@ -313,7 +314,7 @@
 
 @media screen and (max-width: 776px) {
     .booking {
-        padding: var(--size-1);
+        padding: var(--size-1) 5%;
     }
 }
 

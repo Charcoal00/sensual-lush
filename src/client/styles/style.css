@@ -191,27 +191,36 @@ img {
 }
 
 .darkmode .link-click,
-.darkmode .nav-btn button {
+.darkmode .nav-btn button, .darkmode .about-page-header .star-label2 {
     background-color: #311d28;
     border-color: #38232f;
 }
 
 .darkmode .navbar,
 .darkmode .highlight,
-.darkmode .review-container {
-    border-color: white;
+.darkmode .review-container,
+.darkmode .container-2-list li span{
+    border-color: white !important;
+}
+.darkmode  .review-headder .h16{
+    color: #b0b0b0;
 }
 
-
+.darkmode .container-2-list li{
+    border-color: #8c8c8c;
+}
 .darkmode .review-headder::before {
     background-color: #dadada;
 }
 
-.darkmode .card-2-link {
+.darkmode .card-2-link, .darkmode .about-page-section-1, .darkmode .container-2-list li {
     background-color: #3f3f3f;
 }
 
-.darkmode .nav-mode-button {
+.darkmode .about-page-section-1 .star-label{
+    background-color: #656565;
+}
+.darkmode .nav-mode-button{
     background-color: #4d4d4d;
 }
 
@@ -228,7 +237,8 @@ img {
 .darkmode .subscription-form button,
 .darkmode .service-header h1.h16,
 .darkmode .price-list p,
-.darkmode .price-list-container h2 {
+.darkmode .price-list-container h2, .darkmode .about-page-header .h20, .darkmode .about-page-section-1 h2, .darkmode .about-page-section-1 .star-label p, .darkmode .about-us-container-1 p,
+.darkmode .container-2-list li, .darkmode .therapist-section .price-list-container h3, .darkmode .therapist-section .price-list-container h4 {
     color: white;
 }
 
@@ -251,25 +261,25 @@ img {
 }
 
 .darkmode .header-images>div {
-    background-image: url("../../../public/img/header-dark.svg");
+    background-image: url("../public/img/header-dark.svg");
 }
 
 .darkmode .quote-icon {
-    background-image: url("../../../public/img/quote-dark.svg");
+    background-image: url("../public/img/quote-dark.svg");
 }
 
 .darkmode .star-label span {
-    background-image: url("../../../public/img/star-dark.svg");
+    background-image: url("../public/img/star-dark.svg");
 }
 
 .darkmode .book-now {
-    background-image: url("../../../public/img/booking-dark.svg");
+    background-image: url("../public/img/booking-dark.svg");
 }
 
 
 .darkmode .review .h16,
 .darkmode .review-container p,
-.darkmode .review-container span {
+.darkmode .review-container span, .darkmode .about-page-section-1 p {
     color: #b0b0b0;
 }
 
@@ -401,7 +411,7 @@ img {
 }
 
 .nav-mode-button {
-    background-color: var(--Service-text-Border-color);
+    background-color: #ededed;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -411,7 +421,7 @@ img {
 }
 
 .nav-mode-button .ckk .moon {
-    background-color: var(--Service-text-Border-color);
+    background-color: #ededed;
     filter: invert(1);
 }
 
@@ -548,7 +558,7 @@ img {
     background-color: pink;
     width: 100%;
     z-index: var(--zindex-1);
-    background-image: url("../../../public/img/facial-massage-1.jpg");
+    background-image: url("../public/img/facial-massage-1.jpg");
     transition: var(--background);
 }
 
@@ -589,7 +599,7 @@ img {
 .label-1>span {
     width: 17px;
     height: 17px;
-    background-image: url("../../../public/img/star-yellow.svg");
+    background-image: url("../public/img/star-yellow.svg");
 }
 
 .label-outside {
@@ -637,7 +647,7 @@ img {
     justify-content: center;
     align-items: center;
     background-color: pink;
-    background-image: url("../../../public/img/blackman-massage.jpg");
+    background-image: url("../public/img/blackman-massage.jpg");
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: center;
@@ -726,10 +736,11 @@ img {
     text-transform: capitalize;
     font-size: var(--smaller);
     font-family: var(--font-2);
+    font-weight: 300;
 }
 
 .star-label span {
-    background-image: url("../../../public/img/star-pink.svg");
+    background-image: url("../public/img/star-pink.svg");
     width: var(--smallest);
     height: var(--smallest);
 }
@@ -780,7 +791,7 @@ img {
     border-radius: 20px;
     width: 100px;
     height: 100px;
-    background-image: url("../../../public/img/facial-massage-1.jpg");
+    background-image: url("../public/img/facial-massage-1.jpg");
     background-color: var(--Service-text-Border-color);
 }
 
@@ -849,7 +860,7 @@ img {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url("../../../public/img/blackman-massage.jpg");
+    background-image: url("../public/img/blackman-massage.jpg");
 }
 
 .gallery-photos-2 {
@@ -989,7 +1000,7 @@ img {
     height: 40px;
     border-radius: 100%;
     margin-right: var(--small);
-    background-image: url("../../../public/img/black\ lady.webp");
+    background-image: url("../public/img/black\ lady.webp");
 }
 
 .review--1>span {
@@ -1002,7 +1013,7 @@ img {
 
 .quote-icon {
     display: block;
-    background-image: url("../../../public/img/quote-light.svg");
+    background-image: url("../public/img/quote-light.svg");
     width: 30px;
     height: 30px;
 }
@@ -1015,7 +1026,7 @@ img {
     width: var(--width-2);
     padding: var(--size-3) var(--size-2);
     margin: var(--size-8) auto;
-    background-image: url("../../../public/img/book-light.svg");
+    background-image: url("../public/img/book-light.svg");
     text-align: center;
 }
 
@@ -1301,7 +1312,7 @@ img {
     }
 
     .header-images>div {
-        background-image: url("../../../public/img/header-light.svg");
+        background-image: url("../public/img/header-light.svg");
         position: relative;
         width: var(--width-2);
         height: 65%;
@@ -1322,7 +1333,7 @@ img {
         flex: 1 1 300px;
         border-radius: 20px;
         background-color: #ce5b9cc7;
-        background-image: url("../../../public/img/facial-massage-1.jpg");
+        background-image: url("../public/img/facial-massage-1.jpg");
     }
 
     .header_1 {
@@ -1511,15 +1522,23 @@ img {
     .service-header h1.h16 {
         font-size: var(--size-5) !important;
     }
-        .price-list-container h2{
-            font-size: var(--size-3) !important;
-        }
-                .price-list p,
-                .price-list span,
-                .price-list h3,
-                .price-list button{
-                    font-size: var(--small) !important;
-                }
+
+    .price-list-container h2 {
+        font-size: var(--size-3) !important;
+    }
+
+    .price-list p,
+    .price-list span,
+    .price-list h3,
+    .price-list button {
+        font-size: var(--small) !important;
+    }
+
+
+
+
+
+
 }
 
 
@@ -1717,12 +1736,14 @@ img {
     .service-header h1.h16 {
         font-size: var(--size-7);
     }
-        .service-header h1.h16 {
-            font-size: calc(var(--size-7) - 10px) !important;
-        }
-                .price-list>div {
-                    flex: 1 1 350px !important;
-                }
+
+    .service-header h1.h16 {
+        font-size: calc(var(--size-7) - 10px) !important;
+    }
+
+    .price-list>div {
+        flex: 1 1 350px !important;
+    }
 }
 
 
@@ -1815,7 +1836,7 @@ img {
     width: 49%;
     background-color: var(--pink-color);
     height: 50%;
-    background-image: url("../../../public/img/blackman-massage.jpg");
+    background-image: url("../public/img/blackman-massage.jpg");
 }
 
 .service-header-images .first-image {
@@ -1882,7 +1903,7 @@ img {
 }
 
 .price-list-image {
-    background-image: url("../../../public/img/facial-massage-1.jpg");
+    background-image: url("../public/img/facial-massage-1.jpg");
     height: 150px;
     display: block;
     width: 100%;
@@ -1910,7 +1931,7 @@ img {
 .benifit-list span {
     width: 10px;
     height: 10px;
-    background-image: url("../../../public/img/star-yellow.svg");
+    background-image: url("../public/img/star-yellow.svg");
     margin: 0 7px;
 }
 
@@ -1924,7 +1945,7 @@ img {
     width: 15px;
     height: 15px;
     margin-right: 4px;
-    background-image: url("../../../public/img/cash-icon.svg");
+    background-image: url("../public/img/cash-icon.svg");
 }
 
 .price-number {
@@ -1959,25 +1980,33 @@ img {
     margin: var(--size-5) auto;
 }
 
-.about-page-header .star-label, .about-page-section-1 .star-label {
+.about-page-header .star-label,
+.about-page-section-1 .star-label,
+.about-us-container-1 .star-label,
+.therapist-section .star-label {
     width: fit-content;
     margin: 0px auto;
     justify-content: center;
     margin-bottom: var(--size-4);
-    background-color: transparent;
-    border-color: orange;
-    color: orange;
+    background-color: white;
+    border-color: #d6ab1d;
+    color: #d6ab1d;
 }
-
-.about-page-header .hi6, .about-page-section-1 .h16 {
+.about-us-container-1 .star-label{
+    background-color: #f9ffbe;
+}
+.about-page-header .hi6,
+.about-page-section-1 .h16 {
     margin: 5px;
 }
 
 .about-page-header .h20 {
+    color: var(--text-color);
     margin-bottom: var(--size-6);
     font-family: var(--font-2);
     font-size: var(--size-6);
     text-align: center;
+    transition: var(--color);
 }
 
 .about-page-header .star-label2 {
@@ -1987,27 +2016,37 @@ img {
     padding: var(--smaller) var(--size-2);
 }
 
+.about-page-header .star-label .h16:last-child {
+    font-size: var(--small) !important;
+}
 
 
 .about-page-section-1 {
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     gap: 5%;
-    margin: 0 auto;
+    margin: var(--size-5) 0 0;
     align-items: stretch;
+    padding: var(--size-3) 5%;
+    background-color: #fffaea;
+    transition: var(--background);
 }
 
 .about-page-section-1 h2 {
     margin-bottom: var(--size-1);
     font-family: var(--font-2);
     font-size: var(--size-6);
+    transition: var(--color);
 }
-.about-page-section-1 p{
+
+.about-page-section-1 p {
     line-height: var(--size-5);
+    transition: var(--color);
 }
+
 .about-page-section-1>div {
-    flex: 1 1 400px;
+    flex: 1 1 350px;
 }
 
 .blur-background-container {
@@ -2016,7 +2055,7 @@ img {
 }
 
 .blur-background-container span {
-    background-image: url("../../../public/img/blackman-massage.jpg");
+    background-image: url("../public/img/facial-massage-1.jpg");
     border-radius: 30px;
 }
 
@@ -2029,9 +2068,280 @@ img {
 .blur-b {
     display: none;
 }
-.about-page-section-1 .star-label{
+
+.about-page-section-1 .star-label {
     margin: var(--size-4) 0;
+    border-color: #d6d6d6;
 }
 .about-page-section-1 .star-label p{
+    color: #8e4d72;
+    transition: var(--color);
+}
+.about-page-section-1 .star-label span{
+    background-image: url("../public/img/star-dark.svg");
+}
+.darkmode .about-page-section-1 .star-label span{
+    background-image: url("../public/img/star-white-filled.svg");
+}
+.about-page-section-1 .star-label p,
+.about-us-container-1 .star-label h2,
+.therapist-section .star-label h2 {
     line-height: initial;
+    margin: 0 7px;
+}
+
+.about-us-promise {
+    margin: 0 0 var(--size-6);
+    width: 100%;
+    padding: var(--size-4) 0;
+    background-color: #fafafa;
+}
+.darkmode .about-us-promise{
+    background-color: #393939;
+}
+
+.about-us-container-1 {
+    flex-direction: column;
+    margin-bottom: var(--size-4);
+}
+
+.about-us-container-1 p {
+    text-align: center;
+    font-size: var(--size-5);
+    font-weight: 700;
+    transition: var(--color);
+}
+
+.about-us-container-1 .star-label {
+    margin: var(--size-2) 0;
+}
+
+.about-us-container-2 {
+    position: relative;
+    padding: 0 5%;
+    justify-content: start;
+    height: 400px;
+    background-image: url("../public/img/circle-frame-white.svg");
+}
+.darkmode .about-us-container-2{
+    background-image: url("../public/img/circle-frame-dark.svg");
+}
+.about-us-container-2>span {
+    width: 48%;
+    height: 80%;
+    background-color: #ce5b9c7c;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-image: url("../public/img/blackman-massage.jpg");
+}
+.therapist-section .price-list-container h3, .therapist-section .price-list-container h4{
+    transition: var(--color);
+}
+.container-2-list {
+    z-index: 5;
+    top: 6%;
+    right: 5%;
+    height: 88%;
+    position: absolute;
+    width: 44%;
+    max-width: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.container-2-list li p {
+    font-size: calc(var(--smaller) + 3px);
+    opacity: 0.8;
+    line-height: 16px;
+}
+
+.container-2-list li>span:first-child {
+    font-size: var(--small);
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 2px 9px;
+    border-radius: 50%;
+    margin: 5px 10px 0 0;
+    transition: var(--border-color);
+}
+
+.container-2-list li>span,
+.container-2-list span p:first-child {
+
+    opacity: 1;
+}
+
+.container-2-list span p:first-child {
+    margin-bottom: 7px;
+}
+
+.container-2-list li {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.074);
+    padding: var(--smaller);
+    border-radius: 8px;
+    align-items: start;
+    transition: var(--color), var(--background);
+}
+
+.therapist-section .review-headder {
+    width: 90%;
+    margin: 0 auto var(--size-4);
+    font-family: var(--font-2);
+}
+
+.therapist-section .therapist-name {
+    font-size: var(--size-3);
+}
+
+.therapist-section p,
+.therapist-section h4 {
+    font-size: var(--small) !important;
+    font-family: var(--font-2);
+    line-height: var(--size-3);
+
+}
+ .review-headder .h16{
+    transition: var(--color);
+ }
+
+.inline {
+    display: inline;
+    margin-bottom: 5px;
+}
+
+.line {
+    display: block;
+    position: relative;
+    margin-bottom: var(--size-1);
+}
+
+.line::before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    content: "";
+}
+
+.therapist-section {
+    margin: var(--size-6) auto;
+}
+
+.therapist-section .price-list-image {
+    height: 280px;
+    background-image: url("../public/img/black\ lady\ 2.webp");
+}
+
+.therapist-section .price-list-container {
+    border-color: transparent;
+    box-shadow: 0px 2px 3px rgb(67, 67, 67);
+}
+
+.therapist-section .link-click {
+    margin-top: var(--size-4);
+}
+
+.therapist-section .star-label {
+    background-color: hwb(323 94% 0%);
+    border: 1px solid var(--Text-border);
+}
+
+.therapist-section .star-label h2 {
+    color: black;
+}
+
+.therapist-section .star-label span {
+    background-image: url("../public/img/star-white-empty.svg");
+}
+
+
+@media screen and (min-width: 768px) {
+    .about-page-section-1 {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .about-page-section-1>div:first-child {
+        margin-bottom: var(--size-5);
+    }
+
+    .blur-background-container {
+        height: auto;
+        position: relative;
+    }
+
+    .blur-a,
+    .blur-b {
+        height: 90%;
+        width: 90%;
+    }
+
+    .blur-b {
+        margin-top: 10%;
+        display: block;
+        filter: blur(5px);
+    }
+
+    .blur-a {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .about-us-container-2 {
+        justify-content: center;
+        height: 500px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .about-us-container-2>span {
+        width: 30%;
+    }
+
+    .container-2-list {
+        height: 40%;
+        top: 30%;
+        width: 90%;
+        max-width: unset;
+    }
+
+    .container-2-list li {
+        width: 48%;
+        max-width: 245px;
+    }
+
+    .container-2-list li:nth-child(2) {
+        position: relative;
+        margin-left: auto;
+    }
+
+    .blur-background-container {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .about-us-container-2 {
+        height: 600px;
+        max-width: 1000px;
+    }
+
+    .about-us-container-2>span {
+        width: 34%;
+    }
+
+    .about-page-section-1 {
+        padding: var(--size-8) 5%;
+        gap: 10%;
+    }
+
+    .about-page-section-1>div:first-child {
+        margin-bottom: var(--size-7);
+    }
 }
