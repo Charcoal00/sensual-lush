@@ -17,9 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+
 </head>
 
 <body class="body">
+    <script src="./component/darkMode.js"></script>
     <!-- load nav -->
     <div class="nav-wrapper" id="nav-wrapper">
         <nav class="navbar flex">
@@ -224,7 +226,7 @@
     </section>
     <!-- feedback form  -->
     <section class="feedback-container">
-        <form class="booking flex feedback">
+        <form class="booking flex feedback" id="feedbackForm">
             <div class="form-head">
                 <h2>contact us</h2>
                 <h3 class="h20">
@@ -270,7 +272,7 @@
         <div class="formfield-container">
 
 
-            <form class="booking flex">
+            <form class="booking flex" id="bookingForm">
 
                 <div class="form-head flex">
                     <h2 class="h20">Book Apointment</h2>
@@ -285,7 +287,7 @@
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="John Doe" required>
                 <label for="date">Booking Date</label>
-                <input type="date" id="date" name="date"required>
+                <input type="date" id="date" name="date" required>
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
 
@@ -306,8 +308,8 @@
                 <label for="note">Note</label>
                 <textarea id="note" name="note" placeholder="Add extra descriptions here" required></textarea>
 
-                <label for="theraphistSelect">Therapist Selection</label>
-                <select id="theraphistSelect" name="theraphySelect">
+                <label for="therapist">Therapist Selection</label>
+                <select id="therapist" name="therapist">
                     <option value="Mr john">Mr john</option>
                     <option value="Esther">Esther</option>
                     <option value="Shade Bola">Shade Bola</option>
@@ -388,6 +390,39 @@
             phoneSpan.forEach((phone) => {
                 phone.classList.add("color-change");
             });
+        });
+
+        function formatPhoneNumber() {
+            let phoneInput = document.getElementById("phone2");
+            let phoneValue = phoneInput.value.replace(/\D/g, "");
+
+            if (phoneValue.startsWith("0")) {
+                phoneValue = phoneValue.substring(1);
+            }
+
+            phoneInput.value = phoneValue;
+            console.log(phoneInput.value);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Feedback Form Submission
+            const API_BASE_URL = "https://sensual-lush-backend.onrender.com/api";
+            document
+                .getElementById("feedbackForm")
+                .addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(this);
+                    fetch(`${API_BASE_URL}/send-feedback`, {
+                        method: "POST",
+                        body: JSON.stringify(Object.fromEntries(formData)),
+                        headers: { "Content-Type": "application/json" },
+                    })
+                        .then((response) => response.text())
+                        .then(alert)
+                        .catch((error) => console.error("Error:", error));
+                });
+
         });
     </script>
     <script>

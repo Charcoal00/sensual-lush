@@ -273,10 +273,10 @@
     background-color: grey;
 }
 
-.darkmode .btn {
+/* .darkmode .btn {
     background-color: #311d28;
     border-color: #38232f;
-}
+} */
 
 .btn:disabled {
     background: #ccc;

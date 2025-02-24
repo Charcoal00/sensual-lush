@@ -23,7 +23,8 @@ transporter.verify((error, success) => {
 
 // Send Booking Form Data
 exports.sendBooking = async (req, res) => {
-    const { name, email, phone, therapy, note, therapist } = req.body;
+    const { name, email, phone, theraphySelect, date, note, therapist } =
+        req.body;
 
     // Email to the Admin
     const mailOptionsAdmin = {
@@ -31,13 +32,39 @@ exports.sendBooking = async (req, res) => {
         to: "wisestar175@gmail.com", // Replace with actual admin email
         subject: "New Booking Request",
         html: `
-            <h2>New Booking Request</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
-            <p><strong>Therapy Option:</strong> ${therapy}</p>
-            <p><strong>Note:</strong> ${note}</p>
-            <p><strong>Preferred Therapist:</strong> ${therapist}</p>
+        <html>
+
+        <body style="font-family: Arial, Helvetica, sans-serif; padding: 20px 5%; box-sizing: border-box;">
+            <div>
+                <h1 style="text-align: center; font-size: 1.5rem">Sensual lush mobile spa</h1>
+                <h2 style="color: #E80385 !important; font-size: 1.3rem;">New Booking request</h2>
+                <p style="font-size: 20px;">Client details summary:</p>
+                <div style="padding: 10px;">
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Phone number:</strong> +234${phone}</p>
+                    <p><strong>Booking date:</strong> ${date}</p>
+                    <P><strong>Theraphy:</strong> ${theraphySelect}</P>
+                    <p><strong>Prefered therapist:</strong> ${therapist}</p>
+                    <p><strong>Added note:</strong> ${note}</p>
+                </div>
+                <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
+                    hesitate to contact our support at <a href="#"
+                        style="color: #E80385 !important; font-weight: 600; display: inline-block;">support@sensuallush.gmail.com</a>.
+                </p>
+            </div>
+            <script>
+                const updatBG = () => {
+                    const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    document.body.style.backgroundColor = darkMode ? '#fff' : '#000';
+                    document.body.style.color = darkMode ? '#000' : '#fff';
+                }
+                updatBG();
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatBG)
+            </script>
+        </body>
+
+        </html>
         `,
     };
 
@@ -47,13 +74,39 @@ exports.sendBooking = async (req, res) => {
         to: email,
         subject: "Booking Confirmation",
         html: `
-            <h2>Your Booking is Confirmed</h2>
-            <p>Dear ${name},</p>
-            <p>We have received your booking request. Below are the details:</p>
-            <p><strong>Therapy:</strong> ${therapy}</p>
-            <p><strong>Preferred Therapist:</strong> ${therapist}</p>
-            <p>We will contact you shortly to confirm the details.</p>
-            <p>Thank you for choosing Sensual Lush Mobile Spa!</p>
+        <html>
+
+            <body style="font-family: Arial, Helvetica, sans-serif; padding: 20px 5%; box-sizing: border-box;">
+                <div>
+                    <h1 style="text-align: center; font-size: 1.5rem">Sensual lush mobile spa</h1>
+                    <h2 style="color: #E80385 !important; font-size: 1.3rem;">Your booking is confirmed</h2>
+                    <p style="font-size: 20px;">Client details summary:</p>
+                    <div style="padding: 10px;">
+                    <p>Dear ${name},</p>
+                    <p>We have received your booking request. Below are the details:</p>
+                    <p><strong>Therapy:</strong> ${theraphySelect}</p>
+                    <p><strong>Preferred Therapist:</strong> ${therapist}</p>
+                    <p><strong>Booking date:</strong> ${date}</p>
+                    <p>We will contact you shortly to confirm the details.</p>
+                    <p>Thank you for choosing Sensual Lush Mobile Spa!</p>
+                    </div>
+                    <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
+                        hesitate to contact our support at <a href="#"
+                            style="color: #E80385 !important; font-weight: 600; display: inline-block;">support@sensuallush.gmail.com</a>.
+                    </p>
+                </div>
+                <script>
+                    const updatBG = () => {
+                        const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        document.body.style.backgroundColor = darkMode ? '#fff' : '#000';
+                        document.body.style.color = darkMode ? '#000' : '#fff';
+                    }
+                    updatBG();
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatBG)
+                </script>
+            </body>
+
+        </html>
         `,
     };
 
@@ -71,18 +124,43 @@ exports.sendBooking = async (req, res) => {
 
 // Send Feedback Form Data
 exports.sendFeedback = async (req, res) => {
-    const { firstName, lastName, email, phone, request } = req.body;
+    const { name2, email2, phone2, message } = req.body;
 
     const mailOptions = {
-        from: `"User Feedback" <${process.env.EMAIL_USER}>`,
+        from: `"Client Feedback" <${process.env.EMAIL_USER}>`,
         to: "wisestar175@gmail.com", // Admin email to receive feedback
-        subject: `New Feedback from ${firstName} ${lastName}`,
+        subject: `New Feedback from ${name2}`,
         html: `
-            <h2>New Feedback Received</h2>
-            <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
-            <p><strong>Request:</strong> ${request}</p>
+        <html>
+
+<body style="font-family: Arial, Helvetica, sans-serif; padding: 20px 5%; box-sizing: border-box;">
+    <div>
+        <h1 style="text-align: center; font-size: 1.5rem">Sensual lush mobile spa</h1>
+        <h2 style="color: #E80385 !important; font-size: 1.3rem;">Feedback Recieved</h2>
+        
+        <div style="padding: 10px;">
+            <p><strong>Name:</strong> ${name2}</p>
+            <p><strong>Email:</strong> ${email2}</p>
+            <p><strong>Phone number:</strong> +234${phone2}</p>
+            <p><strong>Client Feedback:</strong> ${message}</p>
+        </div>
+        <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
+            hesitate to contact our support at <a href="#"
+                style="color: #E80385 !important; font-weight: 600; display: inline-block;">support@sensuallush.gmail.com</a>.
+        </p>
+    </div>
+    <script>
+        const updatBG = () => {
+            const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.body.style.backgroundColor = darkMode ? '#fff' : '#000';
+            document.body.style.color = darkMode ? '#000' : '#fff';
+        }
+        updatBG();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatBG)
+    </script>
+</body>
+
+</html>
         `,
     };
 

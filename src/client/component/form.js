@@ -37,50 +37,23 @@ function formatPhoneNumber() {
     console.log(phoneInput.value);
 }
 
-function formatPhoneNumber() {
-    let phoneInput = document.getElementById("phone");
-    let phoneValue = phoneInput.value.replace(/\D/g, "");
 
-    if (phoneValue.startsWith("0")) {
-        phoneValue = phoneValue.substring(1);
-    }
+document.addEventListener("DOMContentLoaded", function () {
+     const API_BASE_URL = "https://sensual-lush-backend.onrender.com/api";
+    // Booking Form Submission
+    document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+            e.preventDefault();
 
-    phoneInput.value = phoneValue;
-    console.log(phoneInput.value);
-}
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Feedback Form Submission
-//     const API_BASE_URL = "http://localhost:3000/api";
-//     document
-//         .getElementById("feedbackForm")
-//         .addEventListener("submit", function (e) {
-//             e.preventDefault();
-
-//             const formData = new FormData(this);
-//             fetch(`${API_BASE_URL}/send-feedback`, {
-//                 method: "POST",
-//                 body: JSON.stringify(Object.fromEntries(formData)),
-//                 headers: { "Content-Type": "application/json" },
-//             })
-//                 .then((response) => response.text())
-//                 .then(alert)
-//                 .catch((error) => console.error("Error:", error));
-//         });
-
-//     // Booking Form Submission
-//     document
-//         .getElementById("bookingForm")
-//         .addEventListener("submit", function (e) {
-//             e.preventDefault();
-
-//             const formData = new FormData(this);
-//             fetch(`${API_BASE_URL}/send-email`, {
-//                 method: "POST",
-//                 body: JSON.stringify(Object.fromEntries(formData)),
-//                 headers: { "Content-Type": "application/json" },
-//             })
-//                 .then((response) => response.text())
-//                 .then(alert)
-//                 .catch((error) => console.error("Error:", error));
-//         });
-// });
+            const formData = new FormData(this);
+            fetch(`${API_BASE_URL}/send-email`, {
+                method: "POST",
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: { "Content-Type": "application/json" },
+            })
+                .then((response) => response.text())
+                .then(alert)
+                .catch((error) => console.error("Error:", error));
+        });
+});
