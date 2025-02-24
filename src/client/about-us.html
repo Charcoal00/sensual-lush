@@ -405,25 +405,34 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-            // Feedback Form Submission
-            const API_BASE_URL = "https://sensual-lush-backend.onrender.com/api";
-            document
-                .getElementById("feedbackForm")
-                .addEventListener("submit", function (e) {
-                    e.preventDefault();
+    const API_BASE_URL = "https://sensual-lush-backend.onrender.com/api";
 
-                    const formData = new FormData(this);
-                    fetch(`${API_BASE_URL}/send-feedback`, {
-                        method: "POST",
-                        body: JSON.stringify(Object.fromEntries(formData)),
-                        headers: { "Content-Type": "application/json" },
-                    })
-                        .then((response) => response.text())
-                        .then(alert)
-                        .catch((error) => console.error("Error:", error));
-                });
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        const formData = new FormData(this);
+
+        // Convert FormData to JSON correctly
+        let jsonData = {};
+        formData.forEach((value, key) => {
+            jsonData[key] = value;
         });
+
+        console.log("Form Data:", jsonData); // Debugging: Check data before sending
+
+        fetch(`${API_BASE_URL}/send-feedback`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(jsonData),
+        })
+        .then((response) => response.text())
+        .then((data) => {
+            alert("Feedback sent successfully!");
+            console.log("Response:", data);
+        })
+        .catch((error) => console.error("Error:", error));
+    });
+});
     </script>
     <script>
         const parentUl = document.querySelector(".nav-links");
