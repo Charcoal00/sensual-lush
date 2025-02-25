@@ -226,7 +226,7 @@
 }
 
 .phone-number input {
-    padding-left: calc(var(--size-7) - 7px);
+    padding-left: calc(var(--size-7) - 4px);
 }
 
 

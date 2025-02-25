@@ -270,10 +270,10 @@
     <!-- load form  -->
     <div class="formfield" id="formField">
         <div class="formfield-container">
-
-
+    
+    
             <form class="booking flex" id="bookingForm">
-
+    
                 <div class="form-head flex">
                     <h2 class="h20">Book Apointment</h2>
                     <button id="formToggleBtn" role="button">
@@ -286,17 +286,17 @@
                 </div>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="John Doe" required>
-                <label for="date">Booking Date</label>
-                <input type="date" id="date" name="date" required>
+                <label for="Booking date">Booking Date</label>
+                <input type="date" id="date" name="Booking date" required>
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-
+    
                 <label for="phone">Phone Number</label>
                 <div class="phone-number">
                     <span class="number-span">+234</span>
                     <input type="tel" id="phone" name="phone" placeholder="801 1234 567" pattern="[0-9]{10}" required>
                 </div>
-
+    
                 <label for="theraphySelect">Select a theraphy</label>
                 <select id="theraphySelect" name="theraphySelect">
                     <option value="" selected disabled data-price="0">Select theraphy</option>
@@ -304,12 +304,13 @@
                     <option value="Pedicure" data-price="35000">Pedicure</option>
                     <option value="Steam Baths" data-price="40000">Steam Baths</option>
                 </select>
-
+    
                 <label for="note">Note</label>
                 <textarea id="note" name="note" placeholder="Add extra descriptions here" required></textarea>
-
-                <label for="therapist">Therapist Selection</label>
-                <select id="therapist" name="therapist">
+    
+                <label for="theraphistSelect">Therapist Selection</label>
+                <select id="theraphistSelect" name="theraphistSelect">
+                    <option value="" selected disabled>Select Therapist</option>
                     <option value="Mr john">Mr john</option>
                     <option value="Esther">Esther</option>
                     <option value="Shade Bola">Shade Bola</option>
@@ -317,7 +318,7 @@
                 </select>
                 <span class="cost-title h16">As low as:</span>
                 <span class="form-cost">N <span id="priceDisplay">0</span></span>
-
+    
                 <div class="checkbox-group">
                     <input type="checkbox" id="terms">
                     <label for="terms">I agree to the <a class="terms-and-policies">terms of using Sensual
