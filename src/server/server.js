@@ -11,7 +11,11 @@ const PORT = 3000;
 
 // cors
 const corsOptions = {
-    origin: ["https://sensual-lush-frontend.onrender.com"],
+    origin: [
+        "https://sensual-lush-frontend.onrender.com",
+        "http://127.0.0.1:5500",
+        "http://localhost:5500",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };

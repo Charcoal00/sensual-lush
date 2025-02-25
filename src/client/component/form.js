@@ -37,19 +37,39 @@ function formatPhoneNumber() {
     console.log(phoneInput.value);
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
-     const API_BASE_URL = "https://sensual-lush-backend.onrender.com/api";
+    const API_BASE_URL = "https://sensual-lush-backend.onrender.com/api";
+    // const API_BASE_URL2 = "http://localhost:3000/api";
     // Booking Form Submission
     document
         .getElementById("bookingForm")
         .addEventListener("submit", function (e) {
             e.preventDefault();
+            const name = document.getElementById("name").value;
+            const date = document.getElementById("date").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const theraphySelect =
+                document.getElementById("theraphySelect").value;
+            const note = document.getElementById("note").value;
+            const theraphistSelect =
+                document.getElementById("theraphistSelect").value;
 
-            const formData = new FormData(this);
+
+
+
+            
             fetch(`${API_BASE_URL}/send-email`, {
                 method: "POST",
-                body: JSON.stringify(Object.fromEntries(formData)),
+                body: JSON.stringify({
+                    name,
+                    date,
+                    email,
+                    phone,
+                    theraphySelect,
+                    note,
+                    theraphistSelect,
+                }),
                 headers: { "Content-Type": "application/json" },
             })
                 .then((response) => response.text())
