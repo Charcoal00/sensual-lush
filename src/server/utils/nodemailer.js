@@ -23,7 +23,7 @@ transporter.verify((error, success) => {
 
 // Send Booking Form Data
 exports.sendBooking = async (req, res) => {
-    const { name, email, phone, theraphySelect, date, note, therapist } =
+    const { name, email, phone, theraphySelect, date, note, theraphistSelect } =
         req.body;
 
     // Email to the Admin
@@ -45,7 +45,7 @@ exports.sendBooking = async (req, res) => {
                     <p><strong>Phone number:</strong> +234${phone}</p>
                     <p><strong>Booking date:</strong> ${date}</p>
                     <P><strong>Theraphy:</strong> ${theraphySelect}</P>
-                    <p><strong>Prefered therapist:</strong> ${therapist}</p>
+                    <p><strong>Prefered therapist:</strong> ${theraphistSelect}</p>
                     <p><strong>Added note:</strong> ${note}</p>
                 </div>
                 <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
@@ -85,7 +85,7 @@ exports.sendBooking = async (req, res) => {
                     <p>Dear ${name},</p>
                     <p>We have received your booking request. Below are the details:</p>
                     <p><strong>Therapy:</strong> ${theraphySelect}</p>
-                    <p><strong>Preferred Therapist:</strong> ${therapist}</p>
+                    <p><strong>Preferred Therapist:</strong> ${theraphistSelect}</p>
                     <p><strong>Booking date:</strong> ${date}</p>
                     <p>We will contact you shortly to confirm the details.</p>
                     <p>Thank you for choosing Sensual Lush Mobile Spa!</p>
@@ -124,12 +124,12 @@ exports.sendBooking = async (req, res) => {
 
 // Send Feedback Form Data
 exports.sendFeedback = async (req, res) => {
-    const { name2, email2, phone2, message } = req.body;
+    const { nameTwo, emailTwo, phoneTwo, message } = req.body;
 
     const mailOptions = {
         from: `"Client Feedback" <${process.env.EMAIL_USER}>`,
         to: "wisestar175@gmail.com", // Admin email to receive feedback
-        subject: `New Feedback from ${name2}`,
+        subject: `New Feedback from ${nameTwo}`,
         html: `
         <html>
 
@@ -139,9 +139,9 @@ exports.sendFeedback = async (req, res) => {
         <h2 style="color: #E80385 !important; font-size: 1.3rem;">Feedback Recieved</h2>
         
         <div style="padding: 10px;">
-            <p><strong>Name:</strong> ${name2}</p>
-            <p><strong>Email:</strong> ${email2}</p>
-            <p><strong>Phone number:</strong> +234${phone2}</p>
+            <p><strong>Name:</strong> ${nameTwo}</p>
+            <p><strong>Email:</strong> ${emailTwo}</p>
+            <p><strong>Phone number:</strong> +234${phoneTwo}</p>
             <p><strong>Client Feedback:</strong> ${message}</p>
         </div>
         <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not

@@ -235,15 +235,15 @@
                 <p>We'd love to hear from you</p>
             </div>
             <label for="name">Name</label>
-            <input type="text" id="name2" name="name" placeholder="John Doe" required>
+            <input type="text" id="nameTwo" name="name" placeholder="John Doe" required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email2" name="email" placeholder="example@gmail.com" required>
+            <input type="email" id="emailTwo" name="email" placeholder="example@gmail.com" required>
 
             <label for="phone">Phone Number</label>
             <div class="phone-number">
                 <span class="number-span">+234</span>
-                <input type="tel" id="phone2" name="phone" placeholder="801 1234 567" pattern="[0-9]{10}" required>
+                <input type="tel" id="phoneTwo" name="phone" placeholder="801 1234 567" pattern="[0-9]{10}" required>
             </div>
 
 
@@ -384,7 +384,7 @@
         termsCheckbox2.addEventListener("change", () => {
             submitButton2.disabled = !termsCheckbox2.checked;
         });
-        const phoneNumber2 = document.getElementById("phone2");
+        const phoneNumber2 = document.getElementById("phoneTwo");
         phoneNumber2.addEventListener("focus", () => {
             const phoneSpan = document.querySelectorAll(".number-span");
             phoneSpan.forEach((phone) => {
@@ -393,7 +393,7 @@
         });
 
         function formatPhoneNumber() {
-            let phoneInput = document.getElementById("phone2");
+            let phoneInput = document.getElementById("phoneTwo");
             let phoneValue = phoneInput.value.replace(/\D/g, "");
 
             if (phoneValue.startsWith("0")) {
