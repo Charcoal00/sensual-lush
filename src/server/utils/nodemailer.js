@@ -23,8 +23,15 @@ transporter.verify((error, success) => {
 
 // Send Booking Form Data
 exports.sendBooking = async (req, res) => {
-    const { name, email, phone, theraphySelect, date, note, theraphistSelect } =
-        req.body;
+    const {
+        name,
+        date,
+        email,
+        phone,
+        theraphySelect,
+        note,
+        theraphistSelect,
+    } = req.body;
 
     // Email to the Admin
     const mailOptionsAdmin = {
