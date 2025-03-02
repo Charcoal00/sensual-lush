@@ -31,6 +31,7 @@ exports.sendBooking = async (req, res) => {
         theraphySelect,
         note,
         theraphistSelect,
+        happyEndings,
     } = req.body;
 
     // Email to the Admin
@@ -46,7 +47,7 @@ exports.sendBooking = async (req, res) => {
                 <h1 style="text-align: center; font-size: 1.5rem">Sensual lush mobile spa</h1>
                 <h2 style="color: #E80385 !important; font-size: 1.3rem;">New Booking request</h2>
                 <p style="font-size: 20px;">Client details summary:</p>
-                <div style="padding: 10px;">
+                <div style="padding: 15px; border: 1px solid black;">
                     <p><strong>Name:</strong> ${name}</p>
                     <p><strong>Email:</strong> ${email}</p>
                     <p><strong>Phone number:</strong> +234${phone}</p>
@@ -54,10 +55,11 @@ exports.sendBooking = async (req, res) => {
                     <P><strong>Theraphy:</strong> ${theraphySelect}</P>
                     <p><strong>Prefered therapist:</strong> ${theraphistSelect}</p>
                     <p><strong>Added note:</strong> ${note}</p>
+                    <p><strong>Happy endings:</strong> ${happyEndings}</p>
                 </div>
                 <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
-                    hesitate to contact our support at <a href="#"
-                        style="color: #E80385 !important; font-weight: 600; display: inline-block;">support@sensuallush.gmail.com</a>.
+                    hesitate to contact our support at <a href="sensuallushmobiespa@gmail.com"
+                        style="color: #E80385 !important; font-weight: 600; display: inline-block;">sensuallushmobiespa@gmail.com</a>.
                 </p>
             </div>
             <script>
@@ -65,6 +67,7 @@ exports.sendBooking = async (req, res) => {
                     const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
                     document.body.style.backgroundColor = darkMode ? '#fff' : '#000';
                     document.body.style.color = darkMode ? '#000' : '#fff';
+                    document.body.style.borderBlockColor = darkMode ? '#000' : '#fff';
                 }
                 updatBG();
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatBG)
@@ -88,18 +91,19 @@ exports.sendBooking = async (req, res) => {
                     <h1 style="text-align: center; font-size: 1.5rem">Sensual lush mobile spa</h1>
                     <h2 style="color: #E80385 !important; font-size: 1.3rem;">Your booking is confirmed</h2>
                     <p style="font-size: 20px;">Client details summary:</p>
-                    <div style="padding: 10px;">
+                    <div style="padding: 15px; border: 1px solid black;">
                     <p>Dear ${name},</p>
                     <p>We have received your booking request. Below are the details:</p>
                     <p><strong>Therapy:</strong> ${theraphySelect}</p>
                     <p><strong>Preferred Therapist:</strong> ${theraphistSelect}</p>
                     <p><strong>Booking date:</strong> ${date}</p>
+                    <p><strong>Happy endings:</strong> ${happyEndings}</p>
                     <p>We will contact you shortly to confirm the details.</p>
                     <p>Thank you for choosing Sensual Lush Mobile Spa!</p>
                     </div>
-                    <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
-                        hesitate to contact our support at <a href="#"
-                            style="color: #E80385 !important; font-weight: 600; display: inline-block;">support@sensuallush.gmail.com</a>.
+                    <p style="font-size: 1rem; line-height: 30px;">If you did not book this or encounter any issues during booking, please do not
+                        hesitate to contact our support at <a href="sensuallushmobiespa@gmail.com"
+                            style="color: #E80385 !important; font-weight: 600; display: inline-block;">sensuallushmobiespa@gmail.com</a>.
                     </p>
                 </div>
                 <script>
@@ -107,6 +111,7 @@ exports.sendBooking = async (req, res) => {
                         const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
                         document.body.style.backgroundColor = darkMode ? '#fff' : '#000';
                         document.body.style.color = darkMode ? '#000' : '#fff';
+                        document.body.style.borderBlockColor = darkMode ? '#000' : '#fff';
                     }
                     updatBG();
                     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatBG)
@@ -145,14 +150,14 @@ exports.sendFeedback = async (req, res) => {
         <h1 style="text-align: center; font-size: 1.5rem">Sensual lush mobile spa</h1>
         <h2 style="color: #E80385 !important; font-size: 1.3rem;">Feedback Recieved</h2>
         
-        <div style="padding: 10px;">
+        <div style="padding: 15px; border: 1px solid black;">
             <p><strong>Name:</strong> ${nameTwo}</p>
             <p><strong>Email:</strong> ${emailTwo}</p>
             <p><strong>Phone number:</strong> +234${phoneTwo}</p>
             <p><strong>Client Feedback:</strong> ${message}</p>
         </div>
         <p style="font-size: 1rem; line-height: 30px;">If you encounter any issues during booking, please do not
-            hesitate to contact our support at <a href="#"
+            hesitate to contact our support at <a href="sensuallushmobiespa@gmail.com"
                 style="color: #E80385 !important; font-weight: 600; display: inline-block;">support@sensuallush.gmail.com</a>.
         </p>
     </div>
@@ -161,6 +166,7 @@ exports.sendFeedback = async (req, res) => {
             const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
             document.body.style.backgroundColor = darkMode ? '#fff' : '#000';
             document.body.style.color = darkMode ? '#000' : '#fff';
+            document.body.style.borderBlockColor = darkMode ? '#000' : '#fff';
         }
         updatBG();
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatBG)

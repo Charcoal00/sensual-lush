@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://https://sensual-lush-frontend.onrender.com/sitemap.xml

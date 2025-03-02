@@ -1,16 +1,20 @@
 const theraphySelect = document.getElementById("theraphySelect");
 const totalPriceDisplay = document.getElementById("priceDisplay");
+const extraOption = document.getElementById("happyEndings");
 
 function updatePrice() {
     const selectedOption = theraphySelect.options[theraphySelect.selectedIndex];
 
     const price = parseFloat(selectedOption.getAttribute("data-price")) || 0;
+    const extraValue = extraOption.checked ? 40000 : 0;
+    let totalPrice = price + extraValue;
 
     totalPriceDisplay.textContent =
-        price > 1000 ? price.toLocaleString() : price;
+        totalPrice > 1000 ? totalPrice.toLocaleString() : totalPrice;
 }
 updatePrice();
 theraphySelect.addEventListener("change", updatePrice);
+extraOption.addEventListener("change", updatePrice);
 
 const termsCheckbox = document.getElementById("terms");
 const submitButton = document.getElementById("submitBtn");
@@ -54,11 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const note = document.getElementById("note").value;
             const theraphistSelect =
                 document.getElementById("theraphistSelect").value;
+            const happyEndings = extraOption.checked ? "yes" : "no";
 
-
-
-
-            
             fetch(`${API_BASE_URL}/send-email`, {
                 method: "POST",
                 body: JSON.stringify({
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     theraphySelect,
                     note,
                     theraphistSelect,
+                    happyEndings,
                 }),
                 headers: { "Content-Type": "application/json" },
             })

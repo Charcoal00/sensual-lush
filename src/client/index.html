@@ -4,6 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta property="og:title" content="Sensual Lush Mobile Spa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://https://sensual-lush-frontend.onrender.com" />
+    <meta property="og:image" content="https://https://sensual-lush-frontend.onrender.com/public/img/sensual-lush.png" />
+    <meta property="og:description"
+        content="Christopher Wise, a frontend developer || aspiring fullstack developer building the frontend of website and web applications for the.... Read more" />
+    <meta property="og:site_name" content="Sensual Lush Mobile Spa" />
+    <meta property="og:locale" content="en_US" />
+    
+    
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sensual Lush Mobile Spa" />
+    <meta name="twitter:description"
+        content="Christopher Wise, a frontend developer || aspiring fullstack developer building the frontend of website and web applications for the.... Read more" />
+    <meta name="twitter:image" content="https://https://sensual-lush-frontend.onrender.com/public/img/sensual-lush.png" />
+    <meta name="keywords" content="Code Savant, Web Developer, HTML, CSS, JavaScript, UI/UX, React, Christopher Wise" />
+
+    
     <title>Sensual lush Mobile spa</title>
     <!-- styles -->
     <link rel="stylesheet" href="styles/style.css">
@@ -325,10 +346,10 @@
     <!-- load form  -->
     <div class="formfield" id="formField">
         <div class="formfield-container">
-    
-    
+
+
             <form class="booking flex" id="bookingForm">
-    
+
                 <div class="form-head flex">
                     <h2 class="h20">Book Apointment</h2>
                     <button id="formToggleBtn" role="button">
@@ -345,35 +366,49 @@
                 <input type="date" id="date" name="Booking date" required>
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-    
+
                 <label for="phone">Phone Number</label>
                 <div class="phone-number">
                     <span class="number-span">+234</span>
                     <input type="tel" id="phone" name="phone" placeholder="801 1234 567" pattern="[0-9]{10}" required>
                 </div>
-    
+
                 <label for="theraphySelect">Select a theraphy</label>
                 <select id="theraphySelect" name="theraphySelect">
                     <option value="" selected disabled data-price="0">Select theraphy</option>
-                    <option value="Massage" data-price="30000">Massage</option>
-                    <option value="Pedicure" data-price="35000">Pedicure</option>
+                    <option value="Rejuvenating facials" data-price="40000">Rejuvenating facials</option>
+                    <option value="Pedicure & Manicure" data-price="35000">Pedicure & Manicure</option>
                     <option value="Steam Baths" data-price="40000">Steam Baths</option>
+                    <option value="Deep tissue massage" data-price="100000">Deep tissue massage</option>
+                    <option value="Relaxation massage" data-price="40000">Relaxation massage</option>
+                    <option value="Holiwood wax" data-price="25000">Holiwood wax</option>
+                    <option value="Under-arm wax" data-price="17000">Under-arm wax</option>
+                    <option value="Full leg wax" data-price="25000">Full leg wax</option>
+                    <option value="Chest wax" data-price="20000">Chest wax</option>
+                    <option value="Black wax" data-price="20000">Black wax</option>
                 </select>
-    
+
                 <label for="note">Note</label>
                 <textarea id="note" name="note" placeholder="Add extra descriptions here" required></textarea>
-    
+
                 <label for="theraphistSelect">Therapist Selection</label>
                 <select id="theraphistSelect" name="theraphistSelect">
                     <option value="" selected disabled>Select Therapist</option>
-                    <option value="Mr john">Mr john</option>
-                    <option value="Esther">Esther</option>
-                    <option value="Shade Bola">Shade Bola</option>
-                    <option value="Shade Bola">Shade Bola</option>
+                    <option value="Juliet">Juliet</option>
+                    <option value="Bolade">Bolade</option>
+                    <option value="Miracle">Miracle</option>
+                    <option value="Cynthia">Cynthia</option>
+                    <option value="Jennet">Jennet</option>
+                    <option value="Loveth">Loveth</option>
+                    <option value="Blessing">Blessing</option>
                 </select>
+                <div class="checkbox-group">
+                    <input type="checkbox" value="100000" id="happyEndings">
+                    <label for="Happy endings">Happy endings?</label>
+                </div>
                 <span class="cost-title h16">As low as:</span>
                 <span class="form-cost">N <span id="priceDisplay">0</span></span>
-    
+
                 <div class="checkbox-group">
                     <input type="checkbox" id="terms">
                     <label for="terms">I agree to the <a class="terms-and-policies">terms of using Sensual
@@ -400,14 +435,14 @@
                 <li class="footer-links-list">
                     <h3>contact us</h3>
                     <ul>
-                        <li><a href="tel:+2343424563456">+234 342 4563 456</a></li>
-                        <li><a href="example@gmail.com">example@gmail.com</a></li>
+                        <li><a href="tel:+2348123318815">+234 812 3318 815</a></li>
+                        <li><a href="sensuallushmobiespa@gmail.com">sensuallushmobiespa@gmail.com</a></li>
                     </ul>
                 </li>
                 <li class="footer-links-list">
-                    <h3>find us</h3>
+                    <h3>find us @</h3>
                     <ul>
-                        <li><a href="#" target="_blank">30, Block A, lekki phase one, Lagos, Nigeria</a></li>
+                        <li><a href="#">Strictly mobile spa.</a></li>
                     </ul>
                     <p class="pp">Every day from 9am to 12pm</p>
                 </li>
@@ -429,7 +464,10 @@
                 <li><a href="#"><span class="flex"><i class="fi fi-brands-whatsapp"></i></span></a></li>
             </ul>
         </div>
-        <p class="footer-credits footer-k">@copywrite hvkh. made byjnjl djjbd</p>
+        <p class="footer-credits footer-k">Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This website was developed
+            by <a style="font-size: inherit; display: inline; text-decoration: underline;" href="code-savant.netlify.app/" target="_blank">Code savant</a>.
+        </p>
     </footer>
     <script src="./component/script.js"></script>
 

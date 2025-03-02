@@ -1766,9 +1766,6 @@ img {
         font-size: calc(var(--size-7) - 10px) !important;
     }
 
-    .price-list>div {
-        flex: 1 1 350px !important;
-    }
 }
 
 
@@ -1877,11 +1874,13 @@ img {
 
 
 .price-list {
-    margin: 0 auto;
+    display: block;
+    grid-template-columns: auto auto;
+    margin: var(--size-4) auto var(--size-9);
+    box-sizing: border-box;
     width: 90%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2%;
+    gap: 1%;
+    align-items: stretch;
 }
 
 .price-list>div {
@@ -2362,6 +2361,9 @@ img {
     .blur-background-container {
         margin: 0;
     }
+    .price-list{
+        display: grid;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -2381,6 +2383,9 @@ img {
 
     .about-page-section-1>div:first-child {
         margin-bottom: var(--size-7);
+    }
+    .price-list{
+        grid-template-columns: auto auto auto;
     }
 }
 
