@@ -6,7 +6,7 @@ function updatePrice() {
     const selectedOption = theraphySelect.options[theraphySelect.selectedIndex];
 
     const price = parseFloat(selectedOption.getAttribute("data-price")) || 0;
-    const extraValue = extraOption.checked ? 40000 : 0;
+    const extraValue = extraOption.checked ? 100000 : 0;
     let totalPrice = price + extraValue;
 
     totalPriceDisplay.textContent =
