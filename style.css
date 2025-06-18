@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'olivera';
-    src: url('/olivera/Olivera_Demo.ttf') format('truetype');
+    src: url('./olivera/Olivera_Demo.ttf') format('truetype');
 }
 
 :root {
