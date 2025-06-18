@@ -1,36 +1,61 @@
-/* 
-primary font 
-font-family: "Cookie", cursive;
-font-family: "Roboto Slab", serif;
-secondary font
-font-family: "Fira Sans", sans-serif;
-color: #FF018A
-*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'olivera';
+    src: url('/olivera/Olivera_Demo.ttf') format('truetype');
+}
+
+:root {
+    --font-1: "olivera", sans-serif;
+    --font2: "Lato", sans-serif;
+    --primary-color: #37092e;
+    --secondary-color: #1d1b1c;
+    --background-color: #f1dbd0;
+}
+
+/* Consolas,
+'Courier New',
+monospace */
 
 
 
-
-
-
-
-
-
-*{
+* {
     padding: 0;
     margin: 0;
 }
-html{font-size: 16px;}
-body{
+
+html {
+    font-size: 16px;
+}
+
+body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--secondary-color);
 }
-h1{font-size: 3.3rem;}
-h2{font-size: 1.4rem;}
-h3{font-size: 1.3rem;}
-h4{font-size: 1.1rem;}
-p, a, span{font-size: 1rem;}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+p,
+a,
+span {
+    font-size: 1rem;
+}
 
 
 
@@ -38,33 +63,54 @@ p, a, span{font-size: 1rem;}
 
 
 
-h2, h3, h4, h5{
-    color:  #FF018A;
+h2,
+h3,
+h4,
+h5 {
+    color: var(--primary-color);
     text-transform: capitalize;
-    font-family: "Roboto Slab", serif;
+    font-family: var(--font-1);
 }
-h3, h4, h5{
-    color: black;
+
+h3,
+h4,
+h5 {
+    color: var(--primary-color);
     margin-bottom: 10px
 }
-a, p, span{
-    font-family: "Fira Sans", sans-serif;
+
+a,
+p,
+span {
+    font-family: var(--font2);
 }
-a, p, li{
+
+a,
+p,
+li {
     line-height: 28px;
 }
-a, p, span, div, button{
+
+a,
+p,
+span,
+div,
+button {
     display: inline-block;
     border: none;
     user-select: none;
-    color: #3c3c3c;
+    color: var(--secondary-color);
 }
-button{
+
+button {
     outline: none;
-    
-    color: #ffffff;
+
+    color: var(--primary-color);
 }
-ul{margin-left: 30px;}
+
+ul {
+    margin-left: 30px;
+}
 
 
 
@@ -73,16 +119,18 @@ ul{margin-left: 30px;}
 
 /* ========= loading  spinner ========== */
 
-body{overflow: hidden;}
+body {
+    overflow: hidden;
+}
 
-#loader{
+#loader {
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,19 +142,19 @@ body{overflow: hidden;}
 
 .spinner {
     opacity: 1;
-    border: 8px solid #f3f3f354;
-    border-top: 8px solid #FF018A;
+    border: 6px solid #f1dbd0a5;
+    border-top: 6px solid var(--primary-color);
     border-radius: 50%;
     background-position: center;
-    width: 40px;
-    height: 40px;
-    animation: spin 0.9s linear infinite;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
 }
 
 
 
 
-.overall-nav{
+.overall-nav {
     z-index: 24;
     width: 100%;
     position: fixed;
@@ -120,7 +168,7 @@ body{overflow: hidden;}
 
 
 
-.main-container{
+.main-container {
     position: relative;
     max-width: 100%;
     height: 100vh;
@@ -128,11 +176,13 @@ body{overflow: hidden;}
 
 
 
-.content-container, .sensual-lush-logo{
+.content-container,
+.sensual-lush-logo {
     z-index: 7;
     position: relative;
 }
-.sensual-lush-logo{
+
+.sensual-lush-logo {
     margin: 20vh auto;
     padding: 5px 0;
     height: auto;
@@ -143,16 +193,19 @@ body{overflow: hidden;}
     align-items: center;
     justify-content: center;
 }
-.sensual-lush-logo img{
+
+.sensual-lush-logo img {
     border-radius: 50%;
     width: auto;
     margin-right: 20px;
     width: 60%;
 }
-.sensual-lush-logo h2{
+
+.sensual-lush-logo h2 {
     text-transform: capitalize;
 }
-.sensual-lush-logo h2 small{
+
+.sensual-lush-logo h2 small {
     font-size: 0.8rem;
     display: inline-block;
     margin-left: 5px;
@@ -161,7 +214,7 @@ body{overflow: hidden;}
 
 
 
-.background-video{
+.background-video {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -170,7 +223,8 @@ body{overflow: hidden;}
     filter: blur(4px);
     outline: none;
 }
-.background-video::before{
+
+.background-video::before {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -180,7 +234,8 @@ body{overflow: hidden;}
     left: 0;
     background-color: rgba(0, 0, 0, 0.669);
 }
-video{
+
+video {
     min-width: 100%;
     min-height: 100vh;
     max-width: 100%;
@@ -188,13 +243,14 @@ video{
     object-fit: cover;
     object-position: center;
 }
-#bg-video2{
+
+#bg-video2 {
     display: none;
 }
 
 
 /* main container */
-.content-container{
+.content-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -208,9 +264,16 @@ video{
 
 
 /* the button container  */
-.service-container{top: 62%;}
-.about-container{top: 75%;}
-.service-container, .about-container{
+.service-container {
+    top: 62%;
+}
+
+.about-container {
+    top: 75%;
+}
+
+.service-container,
+.about-container {
     height: 60px;
     width: 80%;
     position: fixed;
@@ -218,14 +281,15 @@ video{
 }
 
 
-.open, .open2{
+.open,
+.open2 {
     z-index: 3;
     width: 95.5%;
     height: 98%;
     top: 1%;
     overflow-y: hidden;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 
@@ -233,7 +297,8 @@ video{
 
 
 /* buttons */
-.service-container > button, .about-container > button{
+.service-container>button,
+.about-container>button {
     position: sticky;
     top: 0;
     left: 0;
@@ -246,12 +311,13 @@ video{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: white;
-    
+    background-color: var(--background-color);
+
     transition: all 300ms ease;
 }
 
-.open > button, .open2 > button{
+.open>button,
+.open2>button {
     left: 2.5%;
     width: 95%;
     margin: 0;
@@ -266,8 +332,9 @@ video{
 
 
 /* the inner container  */
-.service-container div, .about-container > span{
-    
+.service-container div,
+.about-container>span {
+
     width: 99%;
     margin-left: 0.4%;
     box-sizing: border-box;
@@ -279,9 +346,11 @@ video{
     flex-direction: column;
     align-items: center;
     transition: all 300ms ease;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
-.privacy-container > span, .service-container-inner > span{
+
+.privacy-container>span,
+.service-container-inner>span {
     margin: auto;
     height: 0vh;
     transition: all ease 300ms;
@@ -291,56 +360,66 @@ video{
 
 
 
-.open .privacy-container, .open2 .service-container-inner{
+.open .privacy-container,
+.open2 .service-container-inner {
     margin-top: 0;
     height: auto;
 }
 
-.open2 .service-container-inner{
+.open2 .service-container-inner {
     /* width: 100%; */
     height: 87%;
 }
 
-.open .privacy-container > span, .open2 .service-container-inner > span{
+.open .privacy-container>span,
+.open2 .service-container-inner>span {
     width: 100%;
     height: 87vh;
     overflow-y: scroll;
     display: block;
     transition: all ease 300ms;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
-.open .privacy-container > span div{overflow-x: hidden;}
+
+.open .privacy-container>span div {
+    overflow-x: hidden;
+}
 
 
 
 
 
-.privacy-container > span > span{opacity: 0;}
+.privacy-container>span>span {
+    opacity: 0;
+}
 
-.open .privacy-container > span > span{
+.open .privacy-container>span>span {
     margin-top: 25px;
     margin-left: 5%;
     width: 90% !important;
 }
-.open .privacy-container > span > span, .open2 .bro{
+
+.open .privacy-container>span>span,
+.open2 .bro {
     width: 100%;
     opacity: 1;
     transition: opacity ease 700ms;
     transition-delay: 300ms;
 }
 
-.open .privacy-container > span div p{
+.open .privacy-container>span div p {
     margin: 5px 0 0 10px;
 }
-.kkkk{
+
+.kkkk {
     margin: 0 !important;
-    color: black;
+    color: var(--primary-color);
     font-weight: 600;
     margin-top: 20px;
 }
 
 
-.price{
+.price {
     opacity: 0;
     justify-content: space-between;
     display: flex;
@@ -349,28 +428,31 @@ video{
     padding: 10px 0;
     box-shadow: 0 10px 92px -12px rgba(0, 0, 0, 0);
 }
-.open-now .price{
+
+.open-now .price {
     box-shadow: 0 10px 9px -14px rgba(0, 0, 0, 0.497);
     transition: all 300ms ease;
 }
-.open2 .price{
+
+.open2 .price {
     width: 100%;
     padding: 5px 5%;
     box-sizing: border-box;
     opacity: 1;
-    background-color: white;
+    background-color: var(--background-color);
     transition: opacity 700ms ease 300ms;
 }
 
-.service-container .bro p{
+.service-container .bro p {
     opacity: 0;
     transition: opacity 700ms ease 300ms;
 }
-.open2 .bro p{
+
+.open2 .bro p {
     opacity: 1;
 }
 
-.service-container .bro::after{
+.service-container .bro::after {
     width: 90%;
     height: 0px;
     position: absolute;
@@ -378,41 +460,48 @@ video{
     left: 5%;
     content: "";
     opacity: 0;
-    background-color: black;
+    background-color: var(--secondary-color);
     transition: opacity 700ms ease 300ms;
 }
 
 
 
-.open2 .bro{
+.open2 .bro {
     transition: height ease 700ms;
     margin-bottom: 0px;
     height: auto;
     position: relative;
 }
-.open2 .bro::after{
+
+.open2 .bro::after {
     height: 1px;
     opacity: 1;
     bottom: 12%;
 }
-.open2 .bro.open-now::after{
-    
+
+.open2 .bro.open-now::after {
+
     bottom: 3%;
 }
-.bro .price span span{
+
+.bro .price span span {
     transform: rotateZ(0deg);
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     transition: all 600ms ease;
     line-height: 19px;
+    color: var(--primary-color);
 }
-.open-now .price span span{
+
+.open-now .price span span {
     transform: rotateZ(315deg);
 }
-.bro .price h3{
+
+.bro .price h3 {
     margin: 0;
     text-align: left;
 }
-.bro .price-container{
+
+.bro .price-container {
     position: relative;
     width: 90%;
     opacity: 0;
@@ -422,28 +511,34 @@ video{
     transition: all 300ms ease;
     overflow-y: hidden;
 }
-.bro .price-container p{
+
+.bro .price-container p {
     margin: 0px;
     transform: translateY(-100%);
     transition: all 500ms ease;
 }
-.open2 .open-now{
+
+.open2 .open-now {
     height: auto;
     margin-bottom: 10px;
 }
-.open-now .price-container p{
+
+.open-now .price-container p {
     margin: 15px 0;
     transform: translateY(0%);
 }
-.open-now .price-container{
+
+.open-now .price-container {
     height: auto;
     opacity: 1;
 }
-.bro .price-number{
-    color: black;
-    font-weight: 700;
-    font-size: 1.1rem;
+
+.bro .price-number {
+    color: var(--primary-color);
+    font-weight: 1000;
+    font-size: 1.4rem;
     margin-top: 15px;
+    font-family: var(--font-1);
 }
 
 
@@ -460,8 +555,14 @@ video{
 
 /* ========= animations ========= */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
     /* 0%{transform: scale(1, 1);}
     100%{transform: scale(1.3, 1.3);} */
 }
@@ -474,26 +575,17 @@ video{
 /* ======== media query ======== */
 
 @media screen and (min-width: 700px) {
-    .sensual-lush-logo{
+    .sensual-lush-logo {
         margin: 8vh auto;
     }
-    .sensual-lush-logo img{
+
+    .sensual-lush-logo img {
         width: 35%;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .sensual-lush-logo img{width: 25%;}
+    .sensual-lush-logo img {
+        width: 25%;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
