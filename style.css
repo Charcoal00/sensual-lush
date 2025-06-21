@@ -70,6 +70,7 @@ h5 {
     color: var(--primary-color);
     text-transform: capitalize;
     font-family: var(--font-1);
+    font-style: normal;
 }
 
 h3,
@@ -83,6 +84,7 @@ a,
 p,
 span {
     font-family: var(--font2);
+    font-style: italic;
 }
 
 a,
@@ -485,6 +487,7 @@ video {
 }
 
 .bro .price span span {
+font-style: normal;
     transform: rotateZ(0deg);
     font-size: 2.5rem;
     transition: all 600ms ease;
@@ -517,13 +520,27 @@ video {
     transform: translateY(-100%);
     transition: all 500ms ease;
 }
-
+.bro .price-container ul {
+    margin: 0px;
+    padding: 0px 0px 20px 20px;
+    transform: translateY(100%);
+    transition: all 500ms ease 500ms;
+}
+.bro .price-container span{
+    font-size: 1.1rem;
+    font-weight: bolder;
+    display: inline-block;
+}
 .open2 .open-now {
     height: auto;
     margin-bottom: 10px;
 }
 
 .open-now .price-container p {
+    margin: 15px 0;
+    transform: translateY(0%);
+}
+.open-now .price-container ul {
     margin: 15px 0;
     transform: translateY(0%);
 }
@@ -539,6 +556,7 @@ video {
     font-size: 1.4rem;
     margin-top: 15px;
     font-family: var(--font-1);
+    font-style: normal;
 }
 
 
@@ -588,4 +606,4 @@ video {
     .sensual-lush-logo img {
         width: 25%;
     }
-}
+        }
